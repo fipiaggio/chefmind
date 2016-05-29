@@ -1,0 +1,17 @@
+// Variables globales
+@import "variables";
+// Componentes generales
+@import "main_components/nav";
+// Mixins
+@import "mixins";
+// Páginas
+@import "pages/home";
+
+
+// Clases generales
+.color-text{
+	color: $fontColor;
+}
+.margin-center{
+	margin: 0px auto;
+}

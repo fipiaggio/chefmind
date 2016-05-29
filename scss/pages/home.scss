@@ -1,0 +1,25 @@
+.main-banner {
+    background: #D6CEBA;
+    min-height: 60vh;
+    .search-box {
+        .input-search-field {
+            position: relative;
+        }
+        max-width: 500px;
+        input {
+            @include searchInput;
+        }
+        label {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            line-height: 6.5;
+            cursor: pointer;
+        }
+    }
+}
+
+.chefmind-container {
+    max-width: 500px;
+}

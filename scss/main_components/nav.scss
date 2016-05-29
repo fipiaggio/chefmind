@@ -1,0 +1,18 @@
+@import '../mixins';
+.navbar-principal {
+    // Fondo y fuentes
+    background: $backgroundColor;
+    a {
+        color: $fontColor;
+    }
+    // Ubicación de logo
+    .logo-img {
+        max-height: 100%;
+        max-width: 100px;
+        // Posición centrada con menú colapsado
+        @include mobile {
+            position: absolute;
+            max-width: 100%;
+        }
+    }
+}
