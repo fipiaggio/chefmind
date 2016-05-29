@@ -1,10 +1,10 @@
 @import '../mixins';
 .navbar-principal {
     // Fondo y fuentes
-    background: $backgroundColor;
+    /*background: $backgroundColor;
     a {
         color: $fontColor;
-    }
+    }*/
     // Ubicación de logo
     .logo-img {
         max-height: 100%;
@@ -15,4 +15,8 @@
             max-width: 100%;
         }
     }
+}
+.footer-principal{
+    background: $backgroundColor;
+    margin-top: 0;
 }
