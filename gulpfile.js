@@ -7,6 +7,7 @@ gulp.task('styles', function() {
         .pipe(sass({
             outputStyle: 'compressed'
         }))
+        .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./css'))
         .pipe(browserSync.reload({
             stream: true
@@ -15,6 +16,7 @@ gulp.task('styles', function() {
         .pipe(sass({
             outputStyle: 'compressed'
         }))
+        .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./css'))
         .pipe(browserSync.reload({
             stream: true

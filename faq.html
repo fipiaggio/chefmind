@@ -18,51 +18,54 @@
         <div class="nav-wrapper container">
             <a id="logo-container" href="#" class=""><img class="logo-img" src="img/logo.svg" alt=""></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="#">Recetas</a></li>
-                <li><a href="#">Categorías</a></li>
-                <li><a href="#">Preguntas Frecuentes</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="index.html">Recetas</a></li>
+                <li><a href="categorias.html">Categorías</a></li>
+                <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
             <ul id="nav-mobile" class="side-nav">
-                <li><a href="#">Recetas</a></li>
-                <li><a href="#">Categorías</a></li>
-                <li><a href="#">Preguntas Frecuentes</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="index.html">Recetas</a></li>
+                <li><a href="categorias.html">Categorías</a></li>
+                <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
     </nav>
+    <div class="section-heading">
+        <div class="container">
+            <h4 class="title">Preguntas frecuentes</h4>
+        </div>
+    </div>
     <div class="section no-pad-bot main-banner" id="index-banner">
         <div class="container">
-            <h1 class="header center color-text">Bienvenido</h1>
-            <div class="row center">
-                <h5 class="header col s12 light">Encuentra la receta que estás buscando</h5>
-            </div>
-            <div class="row center">
+            <div class="row">
                 <div class="col s12">
-                    <form class="search-box margin-center">
-                        <div class="input-search-field">
-                            <input id="" type="search" required>
-                            <label for="search"><i class="material-icons">search</i></label>
-                        </div>
-                    </form>
-                </div>
-                <div class="col s12">
-                    <div class="chefmind-container margin-center">
-                        <img class="chefmind responsive-img" src="img/chefmind.svg" alt="">
-                    </div>
+                    <ul class="collapsible" data-collapsible="accordion">
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">stars</i>Pregunta</div>
+                            <div class="collapsible-body">
+                                <p>Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">stars</i>Pregunta</div>
+                            <div class="collapsible-body">
+                                <p>Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">stars</i>Pregunta</div>
+                            <div class="collapsible-body">
+                                <p>Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="section">
-            <h2> Más destacadas <h2>
-        </div>
-        <div class="section">
-        </div>
-    </div>
-    <footer class="page-footer blue-grey darken-3">
+    <footer class="page-footer blue-grey darken-3 footer-principal">
         <div class="container">
             <div class="row">
                 <div class="col l3 s12">
@@ -83,8 +86,7 @@
         </div>
         <div class="footer-copyright">
             <div class="container">
-                <a class="orange-text text-lighten-3" href="#">ChefMind &copy;</a>
-                Todos los derechos reservados
+                <a class="orange-text text-lighten-3" href="#">ChefMind &copy;</a> Todos los derechos reservados
             </div>
         </div>
     </footer>
@@ -93,6 +95,13 @@
     <script>
     $(document).ready(function() {
         $(".button-collapse").sideNav();
+    });
+    </script>
+    <script>
+    $(document).ready(function() {
+        $('.collapsible').collapsible({
+            accordion: false
+        });
     });
     </script>
 </body>
