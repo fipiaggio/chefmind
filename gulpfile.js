@@ -28,7 +28,7 @@ gulp.task('serve', function() {
             baseDir: './'
         }
     })
-    gulp.watch('./scss/*.scss', ['styles']);
+    gulp.watch('./**/*.scss', ['styles']);
     gulp.watch('./**/*.html').on('change', browserSync.reload);
 });
 
