@@ -1,3 +1,9 @@
+.navbar-principal {
+  background: #F2EAD1; }
+
+.navbar-principal a {
+  color: #2E6368; }
+
 .navbar-principal .logo-img {
   max-height: 100%;
   max-width: 100px; }
@@ -14,6 +20,9 @@
 .main-banner {
   background: #D6CEBA;
   min-height: 60vh; }
+
+.main-banner .search-container {
+  min-height: 85px; }
 
 .main-banner .search-box {
   max-width: 500px; }
