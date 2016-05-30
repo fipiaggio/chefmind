@@ -9,37 +9,46 @@
     <link href="css/materialicons.css" rel="stylesheet">
     <!--Materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,all" />
+    <!--Material Design Icons -->
+    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
     <!-- Chefmind Styles -->
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <nav class="navbar-principal" role="navigation">
-        <div class="nav-wrapper container">
-            <a id="logo-container" href="#" class=""><img class="logo-img" src="img/logo.svg" alt=""></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="#">Recetas</a></li>
-                <li><a href="#">Categorías</a></li>
-                <li><a href="#">Preguntas Frecuentes</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-            <ul id="nav-mobile" class="side-nav">
-                <li><a href="#">Recetas</a></li>
-                <li><a href="#">Categorías</a></li>
-                <li><a href="#">Preguntas Frecuentes</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-        </div>
-    </nav>
-    <div class="section no-pad-bot main-banner" id="index-banner">
+    <div class="navbar-fixed">
+        <nav class="navbar-principal" role="navigation">
+            <div class="nav-wrapper container">
+                <a href="#" class="logo-container"><img class="logo-img" src="img/logo.png" alt=""></a>
+                <ul class="right hide-on-med-and-down">
+                    <li class="active"><a href="index.html">Recetas</a></li>
+                    <li><a href="categorias.html">Categorías</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li class="upload"><a href="#"><i class="material-icons left">mode_edit</i>Subir receta</a></li>
+                    <li><a href="login.html">Iniciar Sesión</a></li>
+                    <li><a href="registro.html">Registrarme</a></li>
+                </ul>
+                <ul id="nav-mobile" class="side-nav">
+                    <li class="active"><a href="index.html">Recetas</a></li>
+                    <li><a href="categorias.html">Categorías</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li class="upload"><a href="#"><i class="material-icons left">mode_edit</i>Subir receta</a></li>
+                    <li><a href="login.html">Iniciar Sesión</a></li>
+                    <li><a href="registro.html">Registrarme</a></li>
+                </ul>
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+    </div>
+    <div class="section no-pad-bot main-banner home" id="index-banner">
         <div class="container">
-            <h1 class="header center color-text">Bienvenido</h1>
             <div class="row center">
                 <h5 class="header col s12 light">Encuentra la receta que estás buscando</h5>
             </div>
             <div class="row center">
-                <div class="col s12">
+                <div class="col s12 search-container">
                     <form class="search-box margin-center">
                         <div class="input-search-field">
                             <input id="" type="search" required>
@@ -47,44 +56,191 @@
                         </div>
                     </form>
                 </div>
-                <div class="col s12">
-                    <div class="chefmind-container margin-center">
-                        <img class="chefmind responsive-img" src="img/chefmind.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container destacados">
+        <div class="section">
+            <h2 class="titulo center-align"> ¡Bienvenido a Chef Mind! </h2>
+            <p class="titulo-secundario center-align">El sitio donde podrás encontrar las recetas más útiles. </p>
+        </div>
+        <div class="section">
+            <div class="row">
+                <div class="col s12 m6 l4">
+                    <div class="card hoverable receta">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="http://placehold.it/350x250">
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <p class="card-title activator grey-text text-darken-4">Carne al horno
+                                </p>
+                                <p class="des">
+                                    Traditional affogato is vanilla gelato topped with espresso, but here a tropical sorbet forms an island in a coffee-flavored rum sea
+                                </p>
+                                <a class="right-align" href="#">Ver más...</a>
+                            </div>
+                        </div>
+                        <div class="card-action">
+                            <div class="user-icon">
+                                <i class="material-icons">perm_identity</i>
+                            </div>
+                            <p class="autor">Creada por <a href="#">fpiaggio</a></p>
+                            <i class="mdi mdi-heart like"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card hoverable receta">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="http://placehold.it/350x250">
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <p class="card-title activator grey-text text-darken-4">Carne al horno
+                                </p>
+                                <p class="des">
+                                    Traditional affogato is vanilla gelato topped with espresso, but here a tropical sorbet forms an island in a coffee-flavored rum sea
+                                </p>
+                                <a class="right-align" href="#">Ver más...</a>
+                            </div>
+                        </div>
+                        <div class="card-action">
+                            <div class="user-icon">
+                                <i class="material-icons">perm_identity</i>
+                            </div>
+                            <p class="autor">Creada por <a href="#">fpiaggio</a></p>
+                            <i class="mdi mdi-heart like"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card hoverable receta">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="http://placehold.it/350x250">
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <p class="card-title activator grey-text text-darken-4">Carne al horno
+                                </p>
+                                <p class="des">
+                                    Traditional affogato is vanilla gelato topped with espresso, but here a tropical sorbet forms an island in a coffee-flavored rum sea
+                                </p>
+                                <a class="right-align" href="#">Ver más...</a>
+                            </div>
+                        </div>
+                        <div class="card-action">
+                            <div class="user-icon">
+                                <i class="material-icons">perm_identity</i>
+                            </div>
+                            <p class="autor">Creada por <a href="#">fpiaggio</a></p>
+                            <i class="mdi mdi-heart like"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card hoverable receta">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="http://placehold.it/350x250">
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <p class="card-title activator grey-text text-darken-4">Carne al horno
+                                </p>
+                                <p class="des">
+                                    Traditional affogato is vanilla gelato topped with espresso, but here a tropical sorbet forms an island in a coffee-flavored rum sea
+                                </p>
+                                <a class="right-align" href="#">Ver más...</a>
+                            </div>
+                        </div>
+                        <div class="card-action">
+                            <div class="user-icon">
+                                <i class="material-icons">perm_identity</i>
+                            </div>
+                            <p class="autor">Creada por <a href="#">fpiaggio</a></p>
+                            <i class="mdi mdi-heart like"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card hoverable receta">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="http://placehold.it/350x250">
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <p class="card-title activator grey-text text-darken-4">Carne al horno
+                                </p>
+                                <p class="des">
+                                    Traditional affogato is vanilla gelato topped with espresso, but here a tropical sorbet forms an island in a coffee-flavored rum sea
+                                </p>
+                                <a class="right-align" href="#">Ver más...</a>
+                            </div>
+                        </div>
+                        <div class="card-action">
+                            <div class="user-icon">
+                                <i class="material-icons">perm_identity</i>
+                            </div>
+                            <p class="autor">Creada por <a href="#">fpiaggio</a></p>
+                            <i class="mdi mdi-heart like"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card hoverable receta">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="http://placehold.it/350x250">
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <p class="card-title activator grey-text text-darken-4">Carne al horno
+                                </p>
+                                <p class="des">
+                                    Traditional affogato is vanilla gelato topped with espresso, but here a tropical sorbet forms an island in a coffee-flavored rum sea
+                                </p>
+                                <a class="right-align" href="#">Ver más...</a>
+                            </div>
+                        </div>
+                        <div class="card-action">
+                            <div class="user-icon">
+                                <i class="material-icons">perm_identity</i>
+                            </div>
+                            <p class="autor">Creada por <a href="#">fpiaggio</a></p>
+                            <i class="mdi mdi-heart like"></i>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="section">
-            <h2> Más destacadas <h2>
-        </div>
-        <div class="section">
-        </div>
-    </div>
-    <footer class="page-footer orange">
+    <footer class="page-footer footer-principal">
         <div class="container">
             <div class="row">
-                <div class="col l3 s12">
-                    <h5 class="white-text">Redes Sociales</h5>
+                <div class="col l4 s12">
+                    <h5 class="">¿Quienes sómos?</h5>
+                    <p>Chef Mind es el lugar donde podrás compartir tus recetas con  otros usuarios y convertirte en el  mejor cocinero.</p>
+                </div>
+                <div class="col l3 s12 sitemap">
+                    <h5 class="">Secciones</h5>
                     <ul>
-                        <li><a class="white-text" href="#!">Link 1</a></li>
-                        <li><a class="white-text" href="#!">Link 2</a></li>
+                        <li><a class="" href="#!">Recetas</a></li>
+                        <li><a class="" href="#!">Categorías</a></li>
+                        <li><a class="" href="#!">FAQ</a></li>
+                        <li><a class="" href="#!">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="col l3 s12">
-                    <h5 class="white-text">Sitemap</h5>
+                    <h5 class="">Redes Sociales</h5>
                     <ul>
-                        <li><a class="white-text" href="#!">Link 1</a></li>
-                        <li><a class="white-text" href="#!">Link 2</a></li>
+                        <li><a class="" href="#!">Link 1</a></li>
+                        <li><a class="" href="#!">Link 2</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container">
-                <a class="orange-text text-lighten-3" href="#">ChefMind &copy;</a>
-                Todos los derechos reservados
+                <span><a class="orange-text text-lighten-3" href="#">ChefMind &copy;</a> Todos los derechos reservados</span>
             </div>
         </div>
     </footer>

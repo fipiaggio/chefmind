@@ -1,0 +1,35 @@
+@import '../mixins';
+.receta {
+    text-align: right;
+    .card-title {
+        text-align: left !important;
+    }
+    .des {
+        color: $fontColor !important;
+        font-size: .9rem;
+        text-align: left;
+    }
+    .card-action {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        .user-icon {
+            @include userIcon;
+            background: #8EB6BA;
+            color: #ffffff;
+        }
+        .autor {
+            font-size: .8rem;
+            margin-left: 5px;
+            color: $fontColor;
+            a{
+    	    	text-transform: none !important;
+            }
+        }
+        .like{
+        	margin-left: auto;
+        	color: #ADADAD;
+        	cursor: pointer;
+        }
+    }
+}

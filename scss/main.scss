@@ -1,11 +1,15 @@
 // Variables globales
 @import "variables";
-// Componentes generales
-@import "main_components/nav";
 // Mixins
 @import "mixins";
+// Componentes generales
+@import "main_components/nav";
+@import "main_components/cardReceta";
 // Páginas
 @import "pages/home";
+@import "pages/admin";
+@import "pages/categorias";
+@import "pages/recetaDetalle";
 
 
 // Clases generales
@@ -14,4 +18,15 @@
 }
 .margin-center{
 	margin: 0px auto;
+}
+.section-heading{
+	background: #C6BFAB;
+	color: #ffffff;
+	.title{
+		margin: 0;
+		padding: 10px 0;
+	}
+}
+.row{
+	margin-bottom: 0;
 }

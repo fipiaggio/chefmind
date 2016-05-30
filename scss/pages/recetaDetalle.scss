@@ -1,0 +1,91 @@
+@import "../mixins";
+.receta-detalle {
+    .titulo-receta,
+    .titulo-ingredientes {
+        color: $fontColor;
+        font-size: 2.5rem;
+        padding: 0;
+        margin: 10px 0;
+    }
+    .titulo-ingredientes {
+        font-weight: 100;
+        padding: 50px 20px 0 0;
+        margin: 0;
+    }
+    background: #F2F2F2;
+    .autor-container {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        padding-left: 0;
+        margin-left: 0;
+        .user-icon {
+            @include userIcon;
+            background: #8EB6BA;
+            color: #ffffff;
+        }
+        .autor {
+            font-size: .8rem;
+            margin-left: 5px;
+            color: $fontColor;
+            a {
+                text-transform: none !important;
+            }
+        }
+        .like {
+            margin-left: auto;
+            color: #ADADAD;
+            cursor: pointer;
+        }
+    }
+    .actions {
+        margin-top: 50px;
+        .favs,
+        .share {
+            display: flex;
+            align-items: center;
+            height: 35px;
+            i {
+                margin-right: 15px;
+            }
+        }
+    }
+    .imagen-receta {
+        margin-bottom: 50px;
+    }
+    .caracteristicas {
+        background: #D8D8D8;
+        padding: 10px 0;
+        p {
+            color: $fontColor;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            .caracteristica {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+    .pasos-container {
+        background: #ffffff !important;
+        .ingredientes {
+            display: flex;
+            flex-direction: column;
+            max-height: 150px;
+            flex-wrap: wrap;
+            max-width: 270px;
+            margin-left: 5px;
+            li{
+            	margin-bottom: 15px;
+            	color: #999999;
+            }
+        }
+        ol {
+        	li{ margin-top: 30px; }
+        	padding-bottom: 30px;
+        	border-bottom: 1px solid #8E8E8E;
+        }
+    }
+}

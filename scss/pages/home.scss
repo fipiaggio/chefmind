@@ -1,6 +1,16 @@
-.main-banner {
-    background: #D6CEBA;
-    min-height: 60vh;
+.main-banner.home{
+    .container{
+        padding: 20vh 0px;
+        .search-container{
+            min-height: 85px;
+        }  
+    }
+    //background-attachment: fixed;
+    background-image: url(../img/fondobanner.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #F2F2F2;
     .search-box {
         .input-search-field {
             position: relative;
@@ -19,7 +29,14 @@
         }
     }
 }
-
-.chefmind-container {
-    max-width: 500px;
+.destacados{
+    .titulo{
+        color: $titleColor;
+        margin: 0;
+        margin-top: 20px;
+    }
+    .titulo-secundario{
+        color: $titleColor;
+        font-size: 1.8rem;
+    }
 }
