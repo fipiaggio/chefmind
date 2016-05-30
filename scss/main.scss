@@ -1,9 +1,10 @@
 // Variables globales
 @import "variables";
-// Componentes generales
-@import "main_components/nav";
 // Mixins
 @import "mixins";
+// Componentes generales
+@import "main_components/nav";
+@import "main_components/cardReceta";
 // Páginas
 @import "pages/home";
 @import "pages/admin";

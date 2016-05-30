@@ -19,11 +19,7 @@
             background: #AFA061;
             padding: 5px;
             .user-icon {
-                background: #ffffff;
-                color: #AFA061;
-                display: flex;
-                padding: 5px;
-                border-radius: 50%;
+                @include userIcon;
             }
         }
         .user-options {
