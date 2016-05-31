@@ -56,8 +56,11 @@
     .caracteristicas {
         background: #D8D8D8;
         padding: 10px 0;
-        p {
+        p,
+        i {
             color: $fontColor;
+            font-size: 1.3rem;
+            margin-left: 5px;
         }
         .container {
             display: flex;
@@ -77,15 +80,29 @@
             flex-wrap: wrap;
             max-width: 270px;
             margin-left: 5px;
-            li{
-            	margin-bottom: 15px;
-            	color: #999999;
+            li {
+                margin-bottom: 15px;
+                margin-right: 35px;
+                color: #999999;
             }
         }
         ol {
-        	li{ margin-top: 30px; }
-        	padding-bottom: 30px;
-        	border-bottom: 1px solid #8E8E8E;
+            li {
+                margin-top: 30px;
+            }
+            padding-bottom: 30px;
+            border-bottom: 1px solid #8E8E8E;
+            color: $fontColor;
+        }
+    }
+    .share {
+        ul {
+            display: flex;
+            margin-top: 5px !important;
+            a{
+                color : $fontColor;
+                font-size: 1.6rem;
+            }
         }
     }
 }

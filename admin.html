@@ -9,85 +9,207 @@
     <link href="css/materialicons.css" rel="stylesheet">
     <!--Materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,all" />
+    <!--Material Design Icons -->
+    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
     <!-- Chefmind Styles -->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <nav class="navbar-principal" role="navigation">
-        <div class="nav-wrapper container">
-            <a href="#" class="logo-container"><img class="logo-img" src="img/logo.png" alt=""></a>
-            <ul class="right hide-on-med-and-down">
-                <li class="active"><a href="index.html">Recetas</a></li>
-                <li><a href="categorias.html">Categorías</a></li>
-                <li><a href="faq.html">Contacto</a></li>
-                <li><a href="contacto.html">FAQ</a></li>
-                <li class="upload"><a href=""><i class="material-icons left">mode_edit</i>Subir receta</a></li>
-                <li><a href="contacto.html">Iniciar Sesión</a></li>
-                <li><a href="contacto.html">Registrarme</a></li>
-            </ul>
-            <ul id="nav-mobile" class="side-nav">
-                <li class="active"><a href="index.html">Recetas</a></li>
-                <li><a href="categorias.html">Categorías</a></li>
-                <li><a href="faq.html">Contacto</a></li>
-                <li><a href="contacto.html">FAQ</a></li>
-                <li class="upload"><a href=""><i class="material-icons left">mode_edit</i>Subir receta</a></li>
-                <li><a href="contacto.html">Iniciar Sesión</a></li>
-                <li><a href="contacto.html">Registrarme</a></li>
-            </ul>
-            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-        </div>
-    </nav>
+    <div class="navbar-fixed">
+        <nav class="navbar-principal" role="navigation">
+            <div class="nav-wrapper container">
+                <a href="index.html" class="logo-container">
+                    <img class="logo-img" src="img/logo.png" alt="logo de chefmind">
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Recetas</a></li>
+                    <li><a href="categorias.html">Categorías</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li class="upload"><a href="subir-receta.html"><i class="material-icons left">mode_edit</i>Subir receta</a></li>
+                </ul>
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a href="index.html">Recetas</a></li>
+                    <li><a href="categorias.html">Categorías</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li class="upload"><a href="subir-receta.html"><i class="material-icons left">mode_edit</i>Subir receta</a></li>
+                </ul>
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+    </div>
     <main class="row admin-container">
         <div class="main row">
-            <div class="col s8 push-s1">
-                <h1>Admin panel</h1>
+            <div class="col s10 m10 l10 left" id="background">
+                <div class="col col s12 m12 l12 flow-text">
+                    <div class="container right">
+                        <div class="row">
+                            <h3 class="left title">Usuarios Seguidos</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row col s12 push-s1">
+                    	<div class="row">
+	                        <div class="card col s12 m4 l3">
+	                            <div class="card-image waves-effect waves-block waves-light">
+	                                <img class="activator" src="img/usuarios/1.jpg">
+	                            </div>
+	                            <div class="card-content">
+	                                <span class="card-title activator grey-text text-darken-4">Dario Gallardo<i class="material-icons material-icons-card icons-card right">more_vert</i></span>
+	                                <p>
+	                                    <a href="#"><i class="material-icons material-icons-card icons-card prefix right">visibility</i></a>
+	                                    <a href="#"><i class="material-icons material-icons-card icons-card prefix right">perm_identity</i></a>
+	                                </p>
+	                            </div>
+	                            <div class="card-reveal">
+	                                <span class="card-title grey-text text-darken-4">Sobre mi<i class="material-icons right">close</i></span>
+	                                <p>Mi comida preferida las milanesas de pescado rellenas con verduras y queso. Si me seguís podras ver esta y otras recetas.</p>
+	                            </div>
+	                        </div>
+                        
+                        <div class="card col s12 m3 l3">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/usuarios/2.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Sandra Vidale<i class="material-icons material-icons-card icons-card right">more_vert</i></span>
+                                <p>
+                                    <a href="#"><i class="material-icons material-icons-card icons-card prefix right">visibility</i></a>
+                                    <a href="#"><i class="material-icons material-icons-card icons-card prefix right">perm_identity</i></a>
+                                </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Sobre mi<i class="material-icons right">close</i></span>
+                                <p>Soy vegetariana y me encanta cocinarme. Mi plato favorito es un salteado de verduras variadas con arroz integral y limón. Es simple de hacer y liviano. Seguime y podras ver varíos de mis secretos en la cocina.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card  col s10 m3 l3">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/usuarios/3.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Juan Cruz Perales<i class="material-icons material-icons-card icons-card right">more_vert</i></span>
+                                <p>
+                                    <a href="#"><i class="material-icons material-icons-card icons-card prefix right">visibility</i></a>
+                                    <a href="#"><i class="material-icons material-icons-card icons-card prefix right">perm_identity</i></a>
+                                </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Sobre mi<i class="material-icons right">close</i></span>
+                                <p>Dispongo de poco tiempo para cocinarme en la semana. Por eso disfruto haciendome el fin de semana la vianda que llevaré en la semana.Mi especialidad es el guiso con muchas zanahorias.Seguime y te cuento mi recetas.</p>
+                            </div>
+                        </div>
+                        <div class="card col s12 m3 l3">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/usuarios/4.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Catherine Willow<i class="material-icons material-icons-card icons-card right">more_vert</i></span>
+                                <p>
+                                    <a href="#"><i class="material-icons material-icons-card icons-card prefix right">visibility</i></a>
+                                    <a href="#"><i class="material-icons material-icons-card icons-card prefix right">perm_identity</i></a>
+                                </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Sobre mi<i class="material-icons right">close</i></span>
+                                <p>Me gustan mucho los platos dulces.Soy amante de los chocolates. Me gusta cocinar mi propia tarta rogel para compartir con amigas mientras tomamos mates y estudiamos.Mira todas mis recetas.</p>
+                            </div>
+                        </div>
+                        <div class="card col s10 m3 l3">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/usuarios/5.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Yamir Kapoor<i class="material-icons material-icons-card icons-card right">more_vert</i></span>
+                                <p>
+                                    <a href="#"><i class="material-icons material-icons-card icons-card prefix right">visibility</i></a>
+                                    <a href="#"><i class="material-icons material-icons-card icons-card prefix right">perm_identity</i></a>
+                                </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Sobre mi<i class="material-icons right">close</i></span>
+                                <p>Mi plato preferido es el que cocina mi esposa “Momo”, es un plato de origen tibetano. También muy popular en la cocina nepalí y en Bengala Occidental.</p>
+                            </div>
+                        </div>
+                        <div class="card col s10 m3 l3">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/usuarios/6.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Alberto Supisiche<i class="material-icons material-icons-card right">more_vert</i></span>
+                                <p>
+                                    <a href="#"><i class="material-icons material-icons-card icons-card prefix right">visibility</i></a>
+                                    <a href="#"><i class="material-icons material-icons-card icons-card prefix right">perm_identity</i></a>
+                                </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Sobre mi<i class="material-icons right">close</i></span>
+                                <p>Mi especialidad es la Lasagna de Atún. Es exquisita porque combina muchos sabores y texturas.Es un plato ideal para comer el fin de semana con la familia.h</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <aside class="col s2 admin-navbar">
+            <aside class="col s2 m2 l2 admin-navbar">
                 <div class="user-header">
-                    <p class="user-name">Francisco Piaggio</p>
+                    <p class="user-name hide-on-small-only">Panel de usaurio</p>
                     <div class="user-icon">
-                        <i class="material-icons">perm_identity</i>
+                        <i class="material-icons prefix">perm_identity</i>
                     </div>
                 </div>
                 <ul class="collection user-options">
-                    <li class="collection-item">
-                        <a href="#">Perfil</a></li>
-                    <li class="collection-item">
-                        <a href="#">Usuarios seguidos</a>
+                    <li class="collection-item iconss active">
+                        <i class="material-icons prefix right">supervisor_account</i>
+                        <a href="admin.html" class="hide-on-small-only">Usuarios seguidos</a>
                     </li>
-                    <li class="collection-item">
-                        <a href="#">Mis recetas</a>
+                    <li class="collection-item iconss">
+                        <i class="material-icons prefix right">search</i>
+                        <a href="misrecetas.html" class="hide-on-small-only">Mis recetas</a>
                     </li>
-                    <li class="collection-item">
-                        <a href="#">Configuración</a>
+                    <li class="collection-item iconss">
+                        <i class="material-icons prefix right">settings</i>
+                        <a href="configuracion.html" class="hide-on-small-only">Configuración</a>
                     </li>
                 </ul>
             </aside>
         </div>
     </main>
-    <footer class="page-footer blue-grey darken-3 footer-principal">
+    <footer class="page-footer footer-principal">
         <div class="container">
             <div class="row">
-                <div class="col l3 s12">
-                    <h5 class="white-text">Redes Sociales</h5>
+                <div class="col l4 s12">
+                    <h5 class="">¿Quienes sómos?</h5>
+                    <p>Chef Mind es el lugar donde podrás compartir tus recetas con  otros usuarios y convertirte en el  mejor cocinero.</p>
+                </div>
+                <div class="col l3 s12 sitemap">
+                    <h5 class="">Secciones</h5>
                     <ul>
-                        <li><a class="white-text" href="#!">Link 1</a></li>
-                        <li><a class="white-text" href="#!">Link 2</a></li>
+                        <li><a class="" href="#!">Recetas</a></li>
+                        <li><a class="" href="#!">Categorías</a></li>
+                        <li><a class="" href="#!">FAQ</a></li>
+                        <li><a class="" href="#!">Contacto</a></li>
                     </ul>
                 </div>
-                <div class="col l3 s12">
-                    <h5 class="white-text">Sitemap</h5>
+                <div class="col l3 s12 social-media">
+                    <h5 class="title">Redes Sociales</h5>
                     <ul>
-                        <li><a class="white-text" href="#!">Link 1</a></li>
-                        <li><a class="white-text" href="#!">Link 2</a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-twitter-circle"></i></a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-facebook-box"></i></a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-pinterest-box"></i></i></a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-instagram"></i></a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container">
-                <a class="orange-text text-lighten-3" href="#">ChefMind &copy;</a> Todos los derechos reservados
+                <span><a class="orange-text text-lighten-3" href="#">ChefMind &copy;</a> Todos los derechos reservados</span>
             </div>
         </div>
     </footer>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Chef Mind</title>
+    <!--Google Icon Font-->
+    <link href="css/materialicons.css" rel="stylesheet">
+    <!--Materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,all" />
+    <!--Material Design Icons -->
+    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+    <!-- Chefmind Styles -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/estilo2.css">
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav class="navbar-principal" role="navigation">
+            <div class="nav-wrapper container">
+                <a href="index.html" class="logo-container">
+                    <img class="logo-img" src="img/logo.png" alt="logo de chefmind">
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Recetas</a></li>
+                    <li><a href="categorias.html">Categorías</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li class="upload active"><a href="subir-receta.html"><i class="material-icons left">mode_edit</i>Subir receta</a></li>
+                    <li><a href="login.html">Iniciar Sesión</a></li>
+                    <li><a href="registro.html">Registrarme</a></li>
+                </ul>
+                <ul id="nav-mobile" class="side-nav">
+                    <li class="active"><a href="index.html">Recetas</a></li>
+                    <li><a href="categorias.html">Categorías</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li class="upload"><a href="subir-receta.html"><i class="material-icons left">mode_edit</i>Subir receta</a></li>
+                    <li><a href="login.html">Iniciar Sesión</a></li>
+                    <li><a href="registro.html">Registrarme</a></li>
+                </ul>
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+    </div>
+    <div class="section-heading">
+        <div class="container">
+            <h4 class="title">Subir receta</h4>
+        </div>
+    </div>
+    <div class="main-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m9 encabezado-subir">
+                    <h5>¡Completá todos los campos correctamente para poder compartir tu receta con los demás cocineros ! </h5>
+
+                </div>
+                <div class="col s12 m12" id="contenedor-form">
+
+                    <form class="col s12">
+                        <div class="row">
+                           <div class="row col s12 m9">
+                            <h5>Nombre de la receta</h5>
+                            <div class="input-field col s12 m11">
+                                <input id="nombre_receta" type="text" class="validate">
+                                <label for="nombre_receta">Ingrese el nombre de la receta</label>
+                            </div>
+                            </div>
+                            <div class="row col m2 s12" id="subir-foto">
+                       <h5>Foto de la receta</h5>
+                        <img src="img/cuadro.png" alt="cuadro" />
+                    </div>
+
+                        </div>
+                        <div class="row">
+                            <h5>Descripción de la receta</h5>
+                            <div class="input-field col s12 m12">
+                                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                <label for="textarea1">Descripción receta</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h5>Ingredientes</h5>
+                            <div class="input-field col s12 m12">
+                                <input id="ingredientes" type="text" class="validate">
+                                <label for="ingredientes">Ingrese los ingredientes</label>
+                                <div class="row right-align">
+                                    <a class="waves-effect waves-light btn botones">AGREGAR Ingrediente</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <h5>Duración</h5>
+                            <div class="input-field col s12 m12">
+                                <input id="duracion_receta" type="text" class="validate">
+                                <label for="duracion_receta">Ingrese la duración de la receta</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h5>Comensales</h5>
+                            <div class="input-field col s12 m12">
+                                <input id="cantidad-comensales" type="text" class="validate">
+                                <label for="cantidad-comensales">Ingrese la cantidad de comensales</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h5>Dificultad</h5>
+                            <div class="input-field col s12 m12">
+                                <select>
+                                    <option value="" disabled selected>Hacé click para elegir la dificultad</option>
+                                    <option value="1">Fácil</option>
+                                    <option value="2">Medio</option>
+                                    <option value="3">Difícil</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h5>Costo</h5>
+                            <div class="input-field col s12 m12">
+                                <select>
+                                    <option value="" disabled selected>Hacé click para elegir el costo</option>
+                                    <option value="1">Bajo</option>
+                                    <option value="2">Medio</option>
+                                    <option value="3">Alto</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h5>Preparación</h5>
+                            <div class="input-field col s12 m12">
+                                <input id="paso" type="text" class="validate">
+                                <label for="paso">Escribí un paso</label>
+                                <div class="row right-align">
+                                    <a class="waves-effect waves-light btn botones">AGREGAR PASO</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </form>
+                    <div class="row" style="margin-top:150px;">
+                        <a class="waves-effect waves-light btn botones">PUBLICAR RECETA</a>
+                    </div>
+                    <br>
+                    
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+    <footer class="page-footer footer-principal">
+        <div class="container">
+            <div class="row">
+                <div class="col l4 s12">
+                    <h5 class="">¿Quienes sómos?</h5>
+                    <p>Chef Mind es el lugar donde podrás compartir tus recetas con  otros usuarios y convertirte en el  mejor cocinero.</p>
+                </div>
+                <div class="col l3 s12 sitemap">
+                    <h5 class="">Secciones</h5>
+                    <ul>
+                        <li><a class="" href="#!">Recetas</a></li>
+                        <li><a class="" href="#!">Categorías</a></li>
+                        <li><a class="" href="#!">FAQ</a></li>
+                        <li><a class="" href="#!">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col l3 s12 social-media">
+                    <h5 class="title">Redes Sociales</h5>
+                    <ul>
+                        <li><a class="" href="#!"><i class="mdi mdi-twitter-circle"></i></a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-facebook-box"></i></a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-pinterest-box"></i></i></a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <span><a class="orange-text text-lighten-3" href="#">ChefMind &copy;</a> Todos los derechos reservados</span>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".button-collapse").sideNav();
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.collapsible').collapsible({
+                accordion: false
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('select').material_select();
+        });
+    </script>
+
+</body>
+
+</html>

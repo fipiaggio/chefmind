@@ -1,3 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
 // Variables globales
 @import "variables";
 // Mixins
@@ -10,6 +15,8 @@
 @import "pages/admin";
 @import "pages/categorias";
 @import "pages/recetaDetalle";
+@import "pages/contacto";
+@import "pages/faq";
 
 
 // Clases generales

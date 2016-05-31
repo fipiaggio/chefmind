@@ -24,6 +24,9 @@
         }
         .user-options {
         	margin-top: 0;
+            li.active{
+                background: #a1c4c3;
+            }
             li{ 
             	background: none;
             	cursor: pointer;

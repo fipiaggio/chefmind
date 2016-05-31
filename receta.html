@@ -9,35 +9,41 @@
     <link href="css/materialicons.css" rel="stylesheet">
     <!--Materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,all" />
+    <!--Material Design Icons -->
+    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
     <!-- Chefmind Styles -->
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <nav class="navbar-principal" role="navigation">
-        <div class="nav-wrapper container">
-            <a href="#" class="logo-container"><img class="logo-img" src="img/logo.png" alt=""></a>
-            <ul class="right hide-on-med-and-down">
-                <li class="active"><a href="index.html">Recetas</a></li>
-                <li><a href="categorias.html">Categorías</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li class="upload"><a href="#"><i class="material-icons left">mode_edit</i>Subir receta</a></li>
-                <li><a href="login.html">Iniciar Sesión</a></li>
-                <li><a href="registro.html">Registrarme</a></li>
-            </ul>
-            <ul id="nav-mobile" class="side-nav">
-                <li class="active"><a href="index.html">Recetas</a></li>
-                <li><a href="categorias.html">Categorías</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li class="upload"><a href="#"><i class="material-icons left">mode_edit</i>Subir receta</a></li>
-                <li><a href="login.html">Iniciar Sesión</a></li>
-                <li><a href="registro.html">Registrarme</a></li>
-            </ul>
-            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-        </div>
-    </nav>
+    <div class="navbar-fixed">
+        <nav class="navbar-principal" role="navigation">
+            <div class="nav-wrapper container">
+                <a href="index.html" class="logo-container">
+                    <img class="logo-img" src="img/logo.png" alt="logo de chefmind">
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Recetas</a></li>
+                    <li><a href="categorias.html">Categorías</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li class="upload"><a href="#"><i class="material-icons left">mode_edit</i>Subir receta</a></li>
+                    <li><a href="login.html">Iniciar Sesión</a></li>
+                    <li><a href="registro.html">Registrarme</a></li>
+                </ul>
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a href="index.html">Recetas</a></li>
+                    <li><a href="categorias.html">Categorías</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li class="upload"><a href="#"><i class="material-icons left">mode_edit</i>Subir receta</a></li>
+                    <li><a href="login.html">Iniciar Sesión</a></li>
+                    <li><a href="registro.html">Registrarme</a></li>
+                </ul>
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+    </div>
     <div class="section-heading">
         <div class="container">
             <h4 class="title">Recetas</h4>
@@ -48,50 +54,58 @@
             <div class="row">
                 <div class="col l5">
                     <div class="title-container">
-                        <h2 class="titulo-receta">Carne al horno</h2>
+                        <h2 class="titulo-receta">Lomo al horno en salsa de queso</h2>
                     </div>
                     <div class="autor-container">
                         <div class="user-icon">
                             <i class="material-icons">perm_identity</i>
                         </div>
-                        <p class="autor">Creada por <a href="#">fpiaggio</a></p>
+                        <p class="autor">Creada por <a href="#">jorgeLeon</a></p>
                     </div>
                     <p class="des">
-                        This tarta is simply made, with chicken, peppers, onions, and tomatoes in a delicious seasoned broth. Serve the soup as is or top with tortilla chips
+                        
+Descripción: Esta receta fue diseñada especialmente para las personas amantes de la de carne de res. Se trata de un plato de lomo de res en salsa de queso, ideal, también, para todos los que adoramos el queso. Se dice que la carne de vaca es una proteína de alta calidad, puesto que aporta diversos minerales y vitaminas esenciales para conservar la salud del organismo, como hierro, zinc y vitamina B12. Aún así, se recomienda moderar su consumo y servir alrededor de los 120 gramos por porción. 
                     </p>
                     <div class="actions">
-                        <div class="favs">
-                            <i class="material-icons">perm_identity</i>
-                            <p> Agregar a favoritos </p>
+                        <div>
+                            <a class="favs" href="#">
+                                <i class="mdi mdi-heart like"></i>
+                                <p> Agregar a favoritos </p>
+                            </a>
                         </div>
-                        <div class="share">
-                            <i class="material-icons">perm_identity</i>
-                            <p> Compartir </p>
+                        <div>
+                            <a class="share" href="#">
+                                <i class="mdi mdi-share-variant"></i>
+                                <p> Compartir </p>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="col l7 imagen-receta">
-                    <img src="http://placehold.it/600x400" alt="">
+                    <img src="img/lomoalqueso.jpg" alt="foto principal de la receta">
                 </div>
             </div>
         </div>
         <div class="caracteristicas">
             <div class="container">
                 <div class="caracteristica">
-                    <i class="material-icons">perm_identity</i>
-                    <p> Compartir </p>
+                    <i class="mdi mdi-square-inc"></i>
+                    <i class="mdi mdi-crop-square"></i>
+                    <i class="mdi mdi-crop-square"></i>
+                    <p> Dificultad baja </p>
                 </div>
                 <div class="caracteristica">
-                    <i class="material-icons">perm_identity</i>
-                    <p> Compartir </p>
+                    <i class="mdi mdi-clock"></i>
+
+                    <p> 1:30hs </p>
                 </div>
                 <div class="caracteristica">
-                    <i class="material-icons">perm_identity</i>
-                    <p> Compartir </p>
+                    <i class="mdi mdi-account-multiple"></i>
+                    <p> 2 Personas </p>
                 </div>
                 <div class="caracteristica">
-                    <i class="material-icons">perm_identity</i>
-                    <p> Compartir </p>
+                    <i class="mdi mdi-cash"></i>
+                    <p> Precio Alto </p>
                 </div>
             </div>
         </div>
@@ -99,24 +113,34 @@
             <div class="container">
                 <h5 class="titulo-ingredientes">Ingredientes</h5>
                 <ul class="ingredientes">
-                    <li>Ingrediente</li>
-                    <li>Ingrediente</li>
-                    <li>Ingrediente</li>
-                    <li>Ingrediente</li>
-                    <li>Ingrediente</li>
-                    <li>Ingrediente</li>
-                    <li>Ingrediente</li>
-                    <li>Ingrediente</li>
+                    <li>1 Pieza de Lomo de res entero</li>
+                    <li>200 Gramos de Queso crema</li>
+                    <li>1 Cucharadita de Tomillo seco</li>
+                    <li>40 Mililitros de Crema de leche</li>
+                    <li>1 Taza de Caldo de res</li>
+                    <li>20 Mililitros de Vino blanco</li>
+                    <li>30 Gramos de Cebolla de verdeo</li>
+                    <li>1 Cucharada sopera de Aceite de girasol</li>
                 </ul>
                 <h5 class="titulo-ingredientes">Pasos</h5>
                 <ol>
-                    <li>This tarta is simply made, with chicken, peppers, onions, and tomatoes in a delicious seasoned broth. Serve the soup as is or top with tortilla chipsThis tarta is simply made, with chicken, peppers, onions, and tomatoes in a delicious seasoned broth. Serve the soup as is or top with tortilla chips</li>
-                    <li>This tarta is simply made, with chicken, peppers, onions, and tomatoes in a delicious seasoned broth. Serve the soup as is or top with tortilla chipsThis tarta is simply made, with chicken, peppers, onions, and tomatoes in a delicious seasoned broth. Serve the soup as is or top with tortilla chips</li>
-                    <li>This tarta is simply made, with chicken, peppers, onions, and tomatoes in a delicious seasoned broth. Serve the soup as is or top with tortilla chipsThis tarta is simply made, with chicken, peppers, onions, and tomatoes in a delicious seasoned broth. Serve the soup as is or top with tortilla chips</li>
-                    <li>This tarta is simply made, with chicken, peppers, onions, and tomatoes in a delicious seasoned broth. Serve the soup as is or top with tortilla chipsThis tarta is simply made, with chicken, peppers, onions, and tomatoes in a delicious seasoned broth. Serve the soup as is or top with tortilla chips</li>
+                    <li>Lleva una sartén a fuego medio con un poco de aceite. Cuando esté caliente, coloca la pieza de lomo con un poco de sal y pimienta. Sella la carne para que se forme una costra por fuera y quede jugosa por dentro al momento de hornearla.</li>
+                    <li>Lleva el lomo de res sellado a una refractaria y precalienta el horno a 200ºC. Debes tener en cuenta que la cocción de la carne dependerá del punto que quieras que tenga. Mi lomo pesaba un kilo y medio, así que lo dejé en el horno durante unos 35-40 minutos aproximadamente. Así pues, hornea el lomo de res y ve vigilando para no pasarte de término de cocción.</li>
+                    <li>Mientras tienes el lomo de res en el horno puedes ir preparando la salsa de queso. Para ello, en un tazón hondo añade el queso crema con la crema de leche, bate con la ayuda de un batidor de mano hasta que se mezclen los dos ingredientes. Si lo deseas, puedes consultar esta receta de salsa de queso holandés un tanto diferente pero igual de deliciosa.</li>
+                    <li>Añade sal, pimienta negra y pasta de ajo al gusto. Mezcla muy bien los ingredientes.</li>
+                    <li> Adiciona el vino blanco, el caldo de res, el tomillo y la cebolla de verdeo finamente picada. Vuelve a mezclar hasta que se integren los ingredientes. Si deseas, puedes añadir o reemplazar cualquier ingrediente por otro que sea de tu preferencia.</li>
+                    <li>Retira del horno el lomo de res y corta cada una de las porciones. Puedes añadir la salsa de queso por encima y decorar con un poco de tomillo seco cada plato, o servirla aparte para que cada comensal se ponga la cantidad deseada.</li>
+                    <li>Otra opción totalmente válida es añadir la salsa de queso por encima y volver a introducir en el horno la carne, durante 10 minutos aproximadamente. A mí me gustan todas las opciones, ¿y tú con cuál te quedas?</li>
+                    <li>Si te ha gustado esta receta de lomo al horno con salsa de queso no olvides visitar estas otras opciones de lomo de res en salsa de tamarindo o lomo de res a la cerveza, pues también serán opciones con las cuales podrás sorprender a tus invitados. Acompaña estas recetas con arroz basmati o patatas revolconas.</li>
                 </ol>
                 <div class="share">
                     <p>Compartir en: </p>
+                    <ul>
+                        <li><a href="#"><i class="mdi mdi-twitter-circle"></i></a></li>
+                        <li><a href="#"><i class="mdi mdi-facebook-box"></i></a></li>
+                        <li><a href="#"><i class="mdi mdi-pinterest-box"></i></i></a></li>
+                        <li><a href="#"><i class="mdi mdi-instagram"></i></a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -126,7 +150,7 @@
             <div class="row">
                 <div class="col l4 s12">
                     <h5 class="">¿Quienes sómos?</h5>
-                    <p>Chef Mind es el lugar donde podrás compartir tus recetas con otros usuarios y convertirte en el mejor cocinero.</p>
+                    <p>Chef Mind es el lugar donde podrás compartir tus recetas con  otros usuarios y convertirte en el  mejor cocinero.</p>
                 </div>
                 <div class="col l3 s12 sitemap">
                     <h5 class="">Secciones</h5>
@@ -137,11 +161,13 @@
                         <li><a class="" href="#!">Contacto</a></li>
                     </ul>
                 </div>
-                <div class="col l3 s12">
-                    <h5 class="">Redes Sociales</h5>
+                <div class="col l3 s12 social-media">
+                    <h5 class="title">Redes Sociales</h5>
                     <ul>
-                        <li><a class="" href="#!">Link 1</a></li>
-                        <li><a class="" href="#!">Link 2</a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-twitter-circle"></i></a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-facebook-box"></i></a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-pinterest-box"></i></i></a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-instagram"></i></a></li>
                     </ul>
                 </div>
             </div>
