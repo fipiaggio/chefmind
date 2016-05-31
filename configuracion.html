@@ -9,37 +9,47 @@
     <link href="css/materialicons.css" rel="stylesheet">
     <!--Materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,all" />
+    <!--Material Design Icons -->
+    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
     <!-- Chefmind Styles -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <nav class="navbar-principal" role="navigation">
-        <div class="nav-wrapper container">
-            <a id="logo-container" href="#" class=""><img class="logo-img" src="img/logo.svg" alt=""></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="recetas.html">Recetas</a></li>
-                <li><a href="#">Categorías</a></li>
-                <li><a href="#">Preguntas Frecuentes</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-            <ul id="nav-mobile" class="side-nav">
-                <li><a href="recetas.html">Recetas</a></li>
-                <li><a href="#">Categorías</a></li>
-                <li><a href="#">Preguntas Frecuentes</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-        </div>
-    </nav>
+    <div class="navbar-fixed">
+        <nav class="navbar-principal" role="navigation">
+            <div class="nav-wrapper container">
+                <a href="index.html" class="logo-container">
+                    <img class="logo-img" src="img/logo.png" alt="logo de chefmind">
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Recetas</a></li>
+                    <li><a href="categorias.html">Categorías</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li class="upload"><a href="subir-receta.html"><i class="material-icons left">mode_edit</i>Subir receta</a></li>
+                </ul>
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a href="index.html">Recetas</a></li>
+                    <li><a href="categorias.html">Categorías</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li class="upload"><a href="subir-receta.html"><i class="material-icons left">mode_edit</i>Subir receta</a></li>
+                    <li><a href="login.html">Iniciar Sesión</a></li>
+                    <li><a href="registro.html">Registrarme</a></li>
+                </ul>
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+    </div>
     <main class="row admin-container">
         <div class="main row">
 			<div class="col s10 m10 l10 left" id="background">
 				<div class="col col s12 m12 l12 flow-text">
 					<div class="container right">
 						<div class="row">
-							<h3 class="left title">Configuración</h3>
+							<h3 class="left title">Configuración de perfil</h3>
 						</div>
 					</div>
 				</div>
@@ -132,47 +142,52 @@
                 </div>
                 <ul class="collection user-options">
                     <li class="collection-item iconss">
-						<i class="material-icons prefix right">perm_identity</i>
-                        <a href="#" class="hide-on-small-only">Perfil</a></li>
-                    <li class="collection-item iconss">
-						<i class="material-icons prefix right">supervisor_account</i>
-                        <a href="#" class="hide-on-small-only">Usuarios seguidos</a>
+                        <i class="material-icons prefix right">supervisor_account</i>
+                        <a href="admin.html" class="hide-on-small-only">Usuarios seguidos</a>
                     </li>
                     <li class="collection-item iconss">
-						<i class="material-icons prefix right">search</i>
-                        <a href="#" class="hide-on-small-only">Mis recetas</a>
+                        <i class="material-icons prefix right">search</i>
+                        <a href="misrecetas.html" class="hide-on-small-only">Mis recetas</a>
                     </li>
-                    <li class="collection-item iconss">
-						<i class="material-icons prefix right">settings</i>
-                        <a href="#" class="hide-on-small-only">Configuración</a>
+                    <li class="collection-item iconss active">
+                        <i class="material-icons prefix right">settings</i>
+                        <a href="configuracion.html" class="hide-on-small-only">Configuración</a>
                     </li>
                 </ul>
             </aside>
         </div>
     </main>
 	
-    <footer class="page-footer blue-grey darken-3 footer-principal">
+    <footer class="page-footer footer-principal">
         <div class="container">
             <div class="row">
-                <div class="col l3 s12">
-                    <h5 class="white-text">Redes Sociales</h5>
+                <div class="col l4 s12">
+                    <h5 class="">¿Quienes sómos?</h5>
+                    <p>Chef Mind es el lugar donde podrás compartir tus recetas con  otros usuarios y convertirte en el  mejor cocinero.</p>
+                </div>
+                <div class="col l3 s12 sitemap">
+                    <h5 class="">Secciones</h5>
                     <ul>
-                        <li><a class="white-text" href="#!">Link 1</a></li>
-                        <li><a class="white-text" href="#!">Link 2</a></li>
+                        <li><a class="" href="#!">Recetas</a></li>
+                        <li><a class="" href="#!">Categorías</a></li>
+                        <li><a class="" href="#!">FAQ</a></li>
+                        <li><a class="" href="#!">Contacto</a></li>
                     </ul>
                 </div>
-                <div class="col l3 s12">
-                    <h5 class="white-text">Sitemap</h5>
+                <div class="col l3 s12 social-media">
+                    <h5 class="title">Redes Sociales</h5>
                     <ul>
-                        <li><a class="white-text" href="#!">Link 1</a></li>
-                        <li><a class="white-text" href="#!">Link 2</a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-twitter-circle"></i></a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-facebook-box"></i></a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-pinterest-box"></i></i></a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-instagram"></i></a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container">
-                <a class="orange-text text-lighten-3" href="#">ChefMind &copy;</a> Todos los derechos reservados
+                <span><a class="orange-text text-lighten-3" href="#">ChefMind &copy;</a> Todos los derechos reservados</span>
             </div>
         </div>
     </footer>

@@ -9,30 +9,42 @@
     <link href="css/materialicons.css" rel="stylesheet">
     <!--Materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,all" />
+    <!--Material Design Icons -->
+    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
     <!-- Chefmind Styles -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/estilo2.css">
 </head>
 
 <body>
-    <nav class="navbar-principal" role="navigation">
-        <div class="nav-wrapper container">
-            <a id="logo-container" href="#" class=""><img class="logo-img" src="img/logo.svg" alt=""></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="index.html">Recetas</a></li>
-                <li><a href="categorias.html">Categorías</a></li>
-                <li><a href="faq.html">Preguntas Frecuentes</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-            <ul id="nav-mobile" class="side-nav">
-                <li><a href="index.html">Recetas</a></li>
-                <li><a href="categorias.html">Categorías</a></li>
-                <li><a href="faq.html">Preguntas Frecuentes</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-        </div>
-    </nav>
+    <div class="navbar-fixed">
+        <nav class="navbar-principal" role="navigation">
+            <div class="nav-wrapper container">
+                <a href="index.html" class="logo-container">
+                    <img class="logo-img" src="img/logo.png" alt="logo de chefmind">
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Recetas</a></li>
+                    <li><a href="categorias.html">Categorías</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li class="upload active"><a href="subir-receta.html"><i class="material-icons left">mode_edit</i>Subir receta</a></li>
+                    <li><a href="login.html">Iniciar Sesión</a></li>
+                    <li><a href="registro.html">Registrarme</a></li>
+                </ul>
+                <ul id="nav-mobile" class="side-nav">
+                    <li class="active"><a href="index.html">Recetas</a></li>
+                    <li><a href="categorias.html">Categorías</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li class="upload"><a href="subir-receta.html"><i class="material-icons left">mode_edit</i>Subir receta</a></li>
+                    <li><a href="login.html">Iniciar Sesión</a></li>
+                    <li><a href="registro.html">Registrarme</a></li>
+                </ul>
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+    </div>
     <div class="section-heading">
         <div class="container">
             <h4 class="title">Subir receta</h4>
@@ -75,7 +87,7 @@
                                 <input id="ingredientes" type="text" class="validate">
                                 <label for="ingredientes">Ingrese los ingredientes</label>
                                 <div class="row right-align">
-                                    <a class="waves-effect waves-light btn botones">AGREGAR PASO</a>
+                                    <a class="waves-effect waves-light btn botones">AGREGAR Ingrediente</a>
                                 </div>
                             </div>
 
@@ -133,6 +145,7 @@
                     <div class="row" style="margin-top:150px;">
                         <a class="waves-effect waves-light btn botones">PUBLICAR RECETA</a>
                     </div>
+                    <br>
                     
                 </div>
                 
@@ -145,7 +158,7 @@
             <div class="row">
                 <div class="col l4 s12">
                     <h5 class="">¿Quienes sómos?</h5>
-                    <p>Chef Mind es el lugar donde podrás compartir tus recetas con otros usuarios y convertirte en el mejor cocinero.</p>
+                    <p>Chef Mind es el lugar donde podrás compartir tus recetas con  otros usuarios y convertirte en el  mejor cocinero.</p>
                 </div>
                 <div class="col l3 s12 sitemap">
                     <h5 class="">Secciones</h5>
@@ -156,11 +169,13 @@
                         <li><a class="" href="#!">Contacto</a></li>
                     </ul>
                 </div>
-                <div class="col l3 s12">
-                    <h5 class="">Redes Sociales</h5>
+                <div class="col l3 s12 social-media">
+                    <h5 class="title">Redes Sociales</h5>
                     <ul>
-                        <li><a class="" href="#!">Link 1</a></li>
-                        <li><a class="" href="#!">Link 2</a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-twitter-circle"></i></a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-facebook-box"></i></a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-pinterest-box"></i></i></a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-instagram"></i></a></li>
                     </ul>
                 </div>
             </div>
