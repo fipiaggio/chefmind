@@ -9,61 +9,67 @@
     <link href="css/materialicons.css" rel="stylesheet">
     <!--Materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,all" />
+    <!--Material Design Icons -->
+    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
     <!-- Chefmind Styles -->
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <nav class="navbar-principal" role="navigation">
-        <div class="nav-wrapper container">
-            <a href="#" class="logo-container"><img class="logo-img" src="img/logo.png" alt=""></a>
-            <ul class="right hide-on-med-and-down">
-                <li class="active"><a href="index.html">Recetas</a></li>
-                <li><a href="categorias.html">Categorías</a></li>
-                <li><a href="faq.html">Contacto</a></li>
-                <li><a href="contacto.html">FAQ</a></li>
-                <li class="upload"><a href=""><i class="material-icons left">mode_edit</i>Subir receta</a></li>
-                <li><a href="contacto.html">Iniciar Sesión</a></li>
-                <li><a href="contacto.html">Registrarme</a></li>
-            </ul>
-            <ul id="nav-mobile" class="side-nav">
-                <li class="active"><a href="index.html">Recetas</a></li>
-                <li><a href="categorias.html">Categorías</a></li>
-                <li><a href="faq.html">Contacto</a></li>
-                <li><a href="contacto.html">FAQ</a></li>
-                <li class="upload"><a href=""><i class="material-icons left">mode_edit</i>Subir receta</a></li>
-                <li><a href="contacto.html">Iniciar Sesión</a></li>
-                <li><a href="contacto.html">Registrarme</a></li>
-            </ul>
-            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-        </div>
-    </nav>
+    <div class="navbar-fixed">
+        <nav class="navbar-principal" role="navigation">
+            <div class="nav-wrapper container">
+                <a href="index.html" class="logo-container">
+                    <img class="logo-img" src="img/logo.png" alt="logo de chefmind">
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Recetas</a></li>
+                    <li><a href="categorias.html">Categorías</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li class="active"><a href="faq.html">FAQ</a></li>
+                    <li class="upload"><a href="#"><i class="material-icons left">mode_edit</i>Subir receta</a></li>
+                    <li><a href="login.html">Iniciar Sesión</a></li>
+                    <li><a href="registro.html">Registrarme</a></li>
+                </ul>
+                <ul id="nav-mobile" class="side-nav">
+                    <li class="active"><a href="index.html">Recetas</a></li>
+                    <li><a href="categorias.html">Categorías</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li class="upload"><a href="#"><i class="material-icons left">mode_edit</i>Subir receta</a></li>
+                    <li><a href="login.html">Iniciar Sesión</a></li>
+                    <li><a href="registro.html">Registrarme</a></li>
+                </ul>
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+    </div>
     <div class="section-heading">
         <div class="container">
             <h4 class="title">Preguntas frecuentes</h4>
         </div>
     </div>
-    <div class="section no-pad-bot main-banner" id="index-banner">
+    <div class="section no-pad-bot main-banner faq">
         <div class="container">
             <div class="row">
                 <div class="col s12">
                     <ul class="collapsible" data-collapsible="accordion">
                         <li>
-                            <div class="collapsible-header"><i class="material-icons">stars</i>Pregunta</div>
+                            <div class="collapsible-header"><i class="material-icons">stars</i>¿Cómo puedo buscar una receta?</div>
                             <div class="collapsible-body">
-                                <p>Lorem ipsum dolor sit amet.</p>
+                                <p>Se pueden buscar nuevas recetas tanto en la sección "Receta" como en "Categoría"</p>
                             </div>
                         </li>
                         <li>
-                            <div class="collapsible-header"><i class="material-icons">stars</i>Pregunta</div>
+                            <div class="collapsible-header"><i class="material-icons">stars</i>¿Cómo puedo cargar mis recetas?</div>
                             <div class="collapsible-body">
-                                <p>Lorem ipsum dolor sit amet.</p>
+                                <p>Para cargar recetas propias es necesario registrarse. Una vez hecho esto se te habilitará la opción "Subir receta"</p>
                             </div>
                         </li>
                         <li>
-                            <div class="collapsible-header"><i class="material-icons">stars</i>Pregunta</div>
+                            <div class="collapsible-header"><i class="material-icons">stars</i>¿Dónde puedo enviar mis sugerencias?</div>
                             <div class="collapsible-body">
-                                <p>Lorem ipsum dolor sit amet.</p>
+                                <p>Podes contactarnos a travez de nuestro formulario de contacto.</p>
                             </div>
                         </li>
                     </ul>
@@ -71,28 +77,36 @@
             </div>
         </div>
     </div>
-    <footer class="page-footer blue-grey darken-3 footer-principal">
+    <footer class="page-footer footer-principal">
         <div class="container">
             <div class="row">
-                <div class="col l3 s12">
-                    <h5 class="white-text">Redes Sociales</h5>
+                <div class="col l4 s12">
+                    <h5 class="">¿Quienes sómos?</h5>
+                    <p>Chef Mind es el lugar donde podrás compartir tus recetas con otros usuarios y convertirte en el mejor cocinero.</p>
+                </div>
+                <div class="col l3 s12 sitemap">
+                    <h5 class="">Secciones</h5>
                     <ul>
-                        <li><a class="white-text" href="#!">Link 1</a></li>
-                        <li><a class="white-text" href="#!">Link 2</a></li>
+                        <li><a class="" href="#!">Recetas</a></li>
+                        <li><a class="" href="#!">Categorías</a></li>
+                        <li><a class="" href="#!">FAQ</a></li>
+                        <li><a class="" href="#!">Contacto</a></li>
                     </ul>
                 </div>
-                <div class="col l3 s12">
-                    <h5 class="white-text">Sitemap</h5>
+                <div class="col l3 s12 social-media">
+                    <h5 class="title">Redes Sociales</h5>
                     <ul>
-                        <li><a class="white-text" href="#!">Link 1</a></li>
-                        <li><a class="white-text" href="#!">Link 2</a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-twitter-circle"></i></a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-facebook-box"></i></a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-pinterest-box"></i></i></a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-instagram"></i></a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container">
-                <a class="orange-text text-lighten-3" href="#">ChefMind &copy;</a> Todos los derechos reservados
+                <span><a class="orange-text text-lighten-3" href="#">ChefMind &copy;</a> Todos los derechos reservados</span>
             </div>
         </div>
     </footer>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Chef Mind</title>
+    <!--Google Icon Font-->
+    <link href="css/materialicons.css" rel="stylesheet">
+    <!--Materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,all" />
+    <!-- Chefmind Styles -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar-principal" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class=""><img class="logo-img" src="img/logo.svg" alt=""></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="recetas.html">Recetas</a></li>
+                <li><a href="#">Categorías</a></li>
+                <li><a href="#">Preguntas Frecuentes</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <ul id="nav-mobile" class="side-nav">
+                <li><a href="recetas.html">Recetas</a></li>
+                <li><a href="#">Categorías</a></li>
+                <li><a href="#">Preguntas Frecuentes</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+    <main class="row admin-container">
+        <div class="main row">
+			<div class="col s10 m10 l10 left" id="background">
+				<div class="col col s12 m12 l12 flow-text">
+					<div class="container right">
+						<div class="row">
+							<h3 class="left title">Configuración</h3>
+						</div>
+					</div>
+				</div>
+				
+					
+				<div class="section no-pad-bot">
+					<div class="container col s12">
+						<div class="container container_login">
+							<div class="container z-depth-1" id="contenedor">
+								<div class="row1 col s12 center">
+									<h2 class="valign">Configuración</h2>
+								</div>
+								
+								<div class="row">
+									<form class="col s12" method="post">
+										<div class="rows">
+											<div class="input-field col s12">
+												<i class="material-icons prefix">perm_identity</i>
+												<input id="first_name" type="text" class="validate">
+												<label for="first_name">Nombre</label>
+											</div>
+										</div>
+										<div class="rows">
+											<div class="input-field col s12">
+												<i class="material-icons prefix">perm_identity</i>
+												<input id="last_name" type="text" class="validate">
+												<label for="last_name">Apellido</label>
+											</div>
+										</div>
+										<div class="rows">
+											<div class="input-field col s12">
+											  <i class="material-icons prefix">email</i>
+											  <input id="email" type="email" class="validate">
+											  <label for="email" data-error="wrong" data-success="right">Email</label>
+											</div>
+										</div>
+										<div class="rows">
+											<div class="input-field col s12">
+												<i class="material-icons prefix">lock</i>
+												<input id="password" type="password" class="validate">
+												<label for="password">Password</label>
+											</div>
+										</div>
+										<div class="rows">
+											<div class="input-field col s12">
+												<i class="material-icons prefix">lock</i>
+												<input id="password1" type="password" class="validate">
+												<label for="password1">Re-Password</label>
+											</div>
+										</div>
+									</form>
+										<div class="rows">
+											<div class="input-field col s12">
+												<form action="#" method="post">
+													<div class="file-field input-field">
+													  <div class="btn">
+														<span>Subir Foto</span>
+														<input type="file" multiple>
+													  </div>
+													  <div class="file-path-wrapper">
+														<input class="file-path validate" type="text" placeholder="Subi una foto de perfil">
+													  </div>
+													</div>
+												</form>
+											</div>
+										</div>
+										<div class="container center-align">
+											<div class="input-field col s12">
+												<button class="btn waves-effect waves-light" type="submit" name="action">Aceptar
+													<i class="material-icons send right">send</i>
+												</button>
+											</div>
+										</div>
+										
+								</div>
+							</div>
+						</div>
+					</div>
+						
+				</div>
+				
+
+			</div>
+            <aside class="col s2 m2 l2 admin-navbar">
+                <div class="user-header">
+                    <p class="user-name hide-on-small-only">Francisco Piaggio</p>
+                    <div class="user-icon">
+                        <i class="material-icons prefix">perm_identity</i>
+                    </div>
+                </div>
+                <ul class="collection user-options">
+                    <li class="collection-item iconss">
+						<i class="material-icons prefix right">perm_identity</i>
+                        <a href="#" class="hide-on-small-only">Perfil</a></li>
+                    <li class="collection-item iconss">
+						<i class="material-icons prefix right">supervisor_account</i>
+                        <a href="#" class="hide-on-small-only">Usuarios seguidos</a>
+                    </li>
+                    <li class="collection-item iconss">
+						<i class="material-icons prefix right">search</i>
+                        <a href="#" class="hide-on-small-only">Mis recetas</a>
+                    </li>
+                    <li class="collection-item iconss">
+						<i class="material-icons prefix right">settings</i>
+                        <a href="#" class="hide-on-small-only">Configuración</a>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+    </main>
+	
+    <footer class="page-footer blue-grey darken-3 footer-principal">
+        <div class="container">
+            <div class="row">
+                <div class="col l3 s12">
+                    <h5 class="white-text">Redes Sociales</h5>
+                    <ul>
+                        <li><a class="white-text" href="#!">Link 1</a></li>
+                        <li><a class="white-text" href="#!">Link 2</a></li>
+                    </ul>
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">Sitemap</h5>
+                    <ul>
+                        <li><a class="white-text" href="#!">Link 1</a></li>
+                        <li><a class="white-text" href="#!">Link 2</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <a class="orange-text text-lighten-3" href="#">ChefMind &copy;</a> Todos los derechos reservados
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $(".button-collapse").sideNav();
+    });
+    </script>
+</body>
+
+</html>
