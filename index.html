@@ -19,7 +19,9 @@
     <div class="navbar-fixed">
         <nav class="navbar-principal" role="navigation">
             <div class="nav-wrapper container">
-                <a href="#" class="logo-container"><img class="logo-img" src="img/logo.png" alt=""></a>
+                <a href="index.html" class="logo-container">
+                    <img class="logo-img" src="img/logo.png" alt="logo de chefmind">
+                </a>
                 <ul class="right hide-on-med-and-down">
                     <li class="active"><a href="index.html">Recetas</a></li>
                     <li><a href="categorias.html">Categorías</a></li>
@@ -45,14 +47,14 @@
     <div class="section no-pad-bot main-banner home" id="index-banner">
         <div class="container">
             <div class="row center">
-                <h5 class="header col s12 light">Encuentra la receta que estás buscando</h5>
+                <p class="header col s12 light titulo-input">Encuentra la receta que estás buscando</p>
             </div>
             <div class="row center">
                 <div class="col s12 search-container">
-                    <form class="search-box margin-center">
+                    <form method="post" action="listado.html" class="search-box margin-center">
                         <div class="input-search-field">
-                            <input id="" type="search" required>
-                            <label for="search"><i class="material-icons">search</i></label>
+                            <input id="" type="search" placeholder="Ingresa los ingredientes que posees">
+                            <label for="search"><a href="listado.html"><i class="material-icons">search</i></a></label>
                         </div>
                     </form>
                 </div>
@@ -61,152 +63,165 @@
     </div>
     <div class="container destacados">
         <div class="section">
-            <h2 class="titulo center-align"> ¡Bienvenido a Chef Mind! </h2>
+            <h1 class="titulo center-align"> ¡Bienvenido a Chef Mind! </h1>
             <p class="titulo-secundario center-align">El sitio donde podrás encontrar las recetas más útiles. </p>
         </div>
         <div class="section">
             <div class="row">
+                <h2 class="titulo-destacadas">Recetas destacadas</h2>
                 <div class="col s12 m6 l4">
                     <div class="card hoverable receta">
                         <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="http://placehold.it/350x250">
+                            <img class="activator" src="img/lomoalqueso.jpg">
                         </div>
                         <div class="card-content">
                             <div class="content">
-                                <p class="card-title activator grey-text text-darken-4">Carne al horno
+                                <p class="card-title activator grey-text text-darken-4">Lomo en salsa de queso
                                 </p>
                                 <p class="des">
-                                    Traditional affogato is vanilla gelato topped with espresso, but here a tropical sorbet forms an island in a coffee-flavored rum sea
+                                     Esta receta fue diseñada especialmente para las personas amantes de la de carne de res. Se trata de un plato de lomo de res en salsa de queso, ideal, también, para todos los que adoramos el queso...
                                 </p>
-                                <a class="right-align" href="#">Ver más...</a>
+                                <a class="right-align" href="receta.html">Ver más...</a>
                             </div>
                         </div>
                         <div class="card-action">
                             <div class="user-icon">
                                 <i class="material-icons">perm_identity</i>
                             </div>
-                            <p class="autor">Creada por <a href="#">fpiaggio</a></p>
+                            <p class="autor">Creada por <a href="#">jorgeLeon</a></p>
                             <i class="mdi mdi-heart like"></i>
+                            <i class="mdi mdi-eye more"></i>
+                           
                         </div>
                     </div>
                 </div>
                 <div class="col s12 m6 l4">
                     <div class="card hoverable receta">
                         <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="http://placehold.it/350x250">
+                            <img class="activator" src="img/naranja.jpg">
                         </div>
                         <div class="card-content">
                             <div class="content">
-                                <p class="card-title activator grey-text text-darken-4">Carne al horno
+                                <p class="card-title activator grey-text text-darken-4">Arroz a la naranja
                                 </p>
                                 <p class="des">
-                                    Traditional affogato is vanilla gelato topped with espresso, but here a tropical sorbet forms an island in a coffee-flavored rum sea
+                                     En esta receta traemos un clásico en la gastronomía, se trata de un delicioso arroz a la naranja, un arroz perfumado con cítrico, exótico y diferente...
                                 </p>
-                                <a class="right-align" href="#">Ver más...</a>
+                                <a class="right-align" href="receta.html">Ver más...</a>
                             </div>
                         </div>
                         <div class="card-action">
                             <div class="user-icon">
                                 <i class="material-icons">perm_identity</i>
                             </div>
-                            <p class="autor">Creada por <a href="#">fpiaggio</a></p>
+                            <p class="autor">Creada por <a href="#">juanP</a></p>
                             <i class="mdi mdi-heart like"></i>
+                            <i class="mdi mdi-eye more"></i>
+                           
                         </div>
                     </div>
                 </div>
                 <div class="col s12 m6 l4">
                     <div class="card hoverable receta">
                         <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="http://placehold.it/350x250">
+                            <img class="activator" src="img/pescado.jpg">
                         </div>
                         <div class="card-content">
                             <div class="content">
-                                <p class="card-title activator grey-text text-darken-4">Carne al horno
+                                <p class="card-title activator grey-text text-darken-4">Palitos de pescado
                                 </p>
                                 <p class="des">
-                                    Traditional affogato is vanilla gelato topped with espresso, but here a tropical sorbet forms an island in a coffee-flavored rum sea
+                                     Los palitos de pescado son una receta muy fácil y rica, ideal para los más pequeños ya que es una forma diferente de presentar un alimento nutritivo y necesario en la dieta básica...
                                 </p>
-                                <a class="right-align" href="#">Ver más...</a>
+                                <a class="right-align" href="receta.html">Ver más...</a>
                             </div>
                         </div>
                         <div class="card-action">
                             <div class="user-icon">
                                 <i class="material-icons">perm_identity</i>
                             </div>
-                            <p class="autor">Creada por <a href="#">fpiaggio</a></p>
+                            <p class="autor">Creada por <a href="#">jorgeLeon</a></p>
                             <i class="mdi mdi-heart like"></i>
+                            <i class="mdi mdi-eye more"></i>
+                           
                         </div>
                     </div>
                 </div>
                 <div class="col s12 m6 l4">
                     <div class="card hoverable receta">
                         <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="http://placehold.it/350x250">
+                            <img class="activator" src="img/sopa.jpg">
                         </div>
                         <div class="card-content">
                             <div class="content">
-                                <p class="card-title activator grey-text text-darken-4">Carne al horno
+                                <p class="card-title activator grey-text text-darken-4">Sopa crema de puerros
                                 </p>
                                 <p class="des">
-                                    Traditional affogato is vanilla gelato topped with espresso, but here a tropical sorbet forms an island in a coffee-flavored rum sea
+                                     La cebolla puerro o ajo porro es originaria de Europa y Asia Occidental y se cultiva con hojas, bulbo y flores comestibles. Suele tener cerca de medio metro de altura y posee de 3 a 5 centímetros de espesor....
                                 </p>
-                                <a class="right-align" href="#">Ver más...</a>
+                                <a class="right-align" href="receta.html">Ver más...</a>
                             </div>
                         </div>
                         <div class="card-action">
                             <div class="user-icon">
                                 <i class="material-icons">perm_identity</i>
                             </div>
-                            <p class="autor">Creada por <a href="#">fpiaggio</a></p>
+                            <p class="autor">Creada por <a href="#">Mario Barba</a></p>
                             <i class="mdi mdi-heart like"></i>
+                            <i class="mdi mdi-eye more"></i>
+                           
                         </div>
                     </div>
                 </div>
                 <div class="col s12 m6 l4">
                     <div class="card hoverable receta">
                         <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="http://placehold.it/350x250">
+                            <img class="activator" src="img/fideo.jpg">
                         </div>
                         <div class="card-content">
                             <div class="content">
-                                <p class="card-title activator grey-text text-darken-4">Carne al horno
+                                <p class="card-title activator grey-text text-darken-4">Spaguetis y langostinos
                                 </p>
                                 <p class="des">
-                                    Traditional affogato is vanilla gelato topped with espresso, but here a tropical sorbet forms an island in a coffee-flavored rum sea
+                                     Fácil, rápida y llena de sabor, así es esta receta de espaguetis con langostinos que en RecetasGratis.net te proponemos.  Si pensabas que los espaguetis solo podían cocinarse con salsa de tomate ...
                                 </p>
-                                <a class="right-align" href="#">Ver más...</a>
+                                <a class="right-align" href="receta.html">Ver más...</a>
                             </div>
                         </div>
                         <div class="card-action">
                             <div class="user-icon">
                                 <i class="material-icons">perm_identity</i>
                             </div>
-                            <p class="autor">Creada por <a href="#">fpiaggio</a></p>
+                            <p class="autor">Creada por <a href="#">Jorge Fideo</a></p>
                             <i class="mdi mdi-heart like"></i>
+                            <i class="mdi mdi-eye more"></i>
+                           
                         </div>
                     </div>
                 </div>
                 <div class="col s12 m6 l4">
                     <div class="card hoverable receta">
                         <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="http://placehold.it/350x250">
+                            <img class="activator" src="img/lomoalqueso.jpg">
                         </div>
                         <div class="card-content">
                             <div class="content">
-                                <p class="card-title activator grey-text text-darken-4">Carne al horno
+                                <p class="card-title activator grey-text text-darken-4">Bondiola a la pizza
                                 </p>
                                 <p class="des">
-                                    Traditional affogato is vanilla gelato topped with espresso, but here a tropical sorbet forms an island in a coffee-flavored rum sea
+                                     Colocar la bondiola en una fuente y salar, aromatizar con ajo picado, romero, tomillo, orégano y perejil. Humectar con vino blanco y vinagre, tapar y reposar en heladera por 30 minutos. ...
                                 </p>
-                                <a class="right-align" href="#">Ver más...</a>
+                                <a class="right-align" href="receta.html">Ver más...</a>
                             </div>
                         </div>
                         <div class="card-action">
                             <div class="user-icon">
                                 <i class="material-icons">perm_identity</i>
                             </div>
-                            <p class="autor">Creada por <a href="#">fpiaggio</a></p>
+                            <p class="autor">Creada por <a href="#">jorgeLeon</a></p>
                             <i class="mdi mdi-heart like"></i>
+                            <i class="mdi mdi-eye more"></i>
+                           
                         </div>
                     </div>
                 </div>
@@ -229,11 +244,13 @@
                         <li><a class="" href="#!">Contacto</a></li>
                     </ul>
                 </div>
-                <div class="col l3 s12">
-                    <h5 class="">Redes Sociales</h5>
+                <div class="col l3 s12 social-media">
+                    <h5 class="title">Redes Sociales</h5>
                     <ul>
-                        <li><a class="" href="#!">Link 1</a></li>
-                        <li><a class="" href="#!">Link 2</a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-twitter-circle"></i></a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-facebook-box"></i></a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-pinterest-box"></i></i></a></li>
+                        <li><a class="" href="#!"><i class="mdi mdi-instagram"></i></a></li>
                     </ul>
                 </div>
             </div>
