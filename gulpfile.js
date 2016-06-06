@@ -3,20 +3,20 @@ var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 
 gulp.task('styles', function() {
-    gulp.src('./scss/main.scss')
+    gulp.src('./app/scss/main.scss')
         .pipe(sass({
             outputStyle: 'compressed'
         }).on('error', sass.logError))
-        .pipe(gulp.dest('./css'))
+        .pipe(gulp.dest('./app/css'))
         .pipe(browserSync.reload({
             stream: true
         }));
-    gulp.src('./scss/materialize.scss')
+    gulp.src('./app/scss/materialize.scss')
         .pipe(sass({
             outputStyle: 'compressed'
         }))
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./css'))
+        .pipe(gulp.dest('./app/css'))
         .pipe(browserSync.reload({
             stream: true
         }));
@@ -26,11 +26,11 @@ gulp.task('serve', function() {
 
     browserSync.init({
         server: {
-            baseDir: './'
+            baseDir: './app/'
         }
     })
-    gulp.watch('./**/*.scss', ['styles']);
-    gulp.watch('./**/*.html').on('change', browserSync.reload);
+    gulp.watch('./app/**/*.scss', ['styles']);
+    gulp.watch('./app/**/*.html').on('change', browserSync.reload);
 });
 
 gulp.task('default', ['styles', 'serve']);
