@@ -15,4 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('ingredient', 'IngredienteController');
+Route::group(['middleware' => 'cors'], function(){
+	Route::post('/auth_login', 'AuthenticateController@userAuth');
+});
