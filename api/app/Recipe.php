@@ -7,6 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 class Recipe extends Model
 {
 	protected $table = 'recipes';
+	protected $fillable = [
+		'name',
+		'description',
+		'img',
+		'dificulty_id',
+		'time',
+		'time',
+		'people',
+		'user_id',
+		'category_id'
+	];
 
 	public function user()
 	{
@@ -17,4 +28,9 @@ class Recipe extends Model
 	{
 		return $this->belongsToMany('App\Ingredient');
 	}
+
+    public function steps()
+    {
+        return $this->hasMany('App\Step');
+    }
 }

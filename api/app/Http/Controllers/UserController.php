@@ -3,23 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Validator;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Recipe;
 use Tymon\JWTAuth\Facades\JWTAuth;
-use Validator;
+use App\User;
 
-class RecipeController extends Controller
+class UserController extends Controller
 {
-
     public function __construct()
     {
         // Vistas autorizadas
         // Menos Index
         $this->middleware('jwt.auth', ['except' => ['index', 'store', 'destroy', 'show']]);
     }
-
     /**
      * Display a listing of the resource.
      *
@@ -27,9 +24,10 @@ class RecipeController extends Controller
      */
     public function index()
     {
-        $recipes = Recipe::all();
-        return response()->json($recipes->toArray());
+        $user = User::all();
+        return response()->json($user->toArray());
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -39,19 +37,18 @@ class RecipeController extends Controller
      */
     public function store(Request $request)
     {
-
         // Valido
         $validator = Validator::make($request->all(), [
-            "name" => "required|max:255",
-            "description" =>"required"
+            "email" => "required|max:255",
+            "password" =>"required"
         ]);
         if($validator->fails()){
             return response()->json(['error' =>'Invalid_fields'], 401);
         }
         // Guardo
-        Recipe::create($request->all());
+        User::create($request->all());
         // Confirmo
-        return response()->json(["mensaje"=>"Receta creada correctamente"]);
+        return response()->json(["mensaje"=>"Usuario creado correctamente"]);
     }
 
     /**
@@ -62,12 +59,13 @@ class RecipeController extends Controller
      */
     public function show($id)
     {
-        $recipe = Recipe::find($id);
-        if(!$recipe){
-            return response()->json(['error' =>'No existe esa receta'], 401);
+        $user = User::find($id);
+        if(!$user){
+            return response()->json(['error' =>'No existe ese usuario'], 401);
         }
-        return response()->json($recipe->toArray());
+        return response()->json($user->toArray());
     }
+
 
     /**
      * Update the specified resource in storage.
@@ -78,8 +76,8 @@ class RecipeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $recipe = Recipe::find($id);
-        $recipe->update($request->all());
+        $user = User::find($id);
+        $user->update($user->all());
         return response()->json(['success'], 200);
     }
 
@@ -91,8 +89,8 @@ class RecipeController extends Controller
      */
     public function destroy($id)
     {
-        $recipe = Recipe::find($id);
-        $recipe->delete();
+        $user = User::find($id);
+        $user->delete();
         return response()->json(['success'], 200);
     }
 }

@@ -16,13 +16,12 @@ class CreateRecipesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('description');
-
-            /* FK de Usuario */
-            $table->integer('user_id')->unsigned();;
-            $table->foreign('user_id')
-                  ->references('id')->on('users')
-                  ->onDelete('cascade');
-
+            $table->string('img');
+            $table->integer('dificulty')->nullable()->unsigned();
+            $table->string('time');
+            $table->integer('people')->nullable()->unsigned();
+            $table->integer('user_id')->nullable()->unsigned();
+            $table->integer('category_id')->nullable()->unsigned();
             $table->timestamps();
         });
     }

@@ -40,4 +40,8 @@ class User extends Model implements AuthenticatableContract,
     public function recipes(){
         return $this->hasMany('App\Recipe');
     }
+
+    public function level(){
+        return $this->belongsTo('App\Level');
+    }
 }

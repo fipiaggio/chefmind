@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -17,4 +16,7 @@ Route::get('/', function () {
 
 Route::group(['middleware' => 'cors'], function(){
 	Route::post('/auth_login', 'AuthenticateController@userAuth');
+	Route::post('/auth_register', 'AuthenticateController@register');
+	Route::resource('recipes', 'RecipeController');
+	Route::resource('users', 'UserController');
 });
