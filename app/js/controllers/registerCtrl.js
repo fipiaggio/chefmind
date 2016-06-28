@@ -14,18 +14,18 @@ angular.module('chefmindApp').controller('registerCtrl', function($scope, $locat
         }, function myError(response) {
             console.log(response);
         });*/
-        /*$http({
+        $http({
             url: 'http://localhost:8000/auth_register',
             method: "POST",
             headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
+                'Content-Type': 'application/json'
             },
             data: $scope.newUser
-        })/**/
+        })/*
         $http.get('http://localhost:8000/recipes').then(function successCallback(response) {
             console.log(response);
         }, function errorCallback(response) {
             console.log(response);
-        });
+        });*/
     }
 });

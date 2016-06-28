@@ -17,8 +17,8 @@ class AuthenticateController extends Controller
     public function __construct(){
        // Apply the jwt.auth middleware to all methods in this controller
        // except for the index method.
+       $this->middleware('jwt.auth', ['except' => ['register']]);
        $this->middleware('cors');
-       //$this->middleware('jwt.auth', ['except' => ['register']]);
     }
 
     public function register(Request $request){
