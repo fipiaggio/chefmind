@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Tymon\JWTAuth\Facades\JWTAuth;
 use App\User;
+use Hash;
 
 class UserController extends Controller
 {
@@ -38,7 +39,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         // Valido
-        $validator = Validator::make($request->all(), [
+        /*$validator = Validator::make($request->all(), [
             "email" => "required|max:255",
             "password" =>"required"
         ]);
@@ -49,6 +50,20 @@ class UserController extends Controller
         User::create($request->all());
         // Confirmo
         return response()->json(["mensaje"=>"Usuario creado correctamente"]);
+        */
+        $credentials = $request->all();
+        $credentials['password'] = Hash::make($credentials['password']);
+        $rules = array('email' => 'unique:users,email');
+        $validator = Validator::make($credentials, $rules);
+
+        if ($validator->fails()) {
+            return response()->json(['error' => 'El usuario ya existe'], 500);
+        }
+        else {
+            // Creo
+            $user = User::create($credentials);
+            return response()->json(compact('user'));
+        }
     }
 
     /**

@@ -1,0 +1,59 @@
+@import '../mixins';
+.card-image{max-height: 214px !important; overflow: hidden}
+.receta {
+
+    text-align: right;
+    overflow: hidden;
+    .card-title {
+        text-align: left !important;
+    }
+    
+    .des {
+        display: inline-block;
+        color: $fontColor !important;
+        font-size: .9rem;
+        text-align: left;
+        overflow: hidden;
+        min-height: 100px;
+        overflow: hidden;
+    }
+    .card-action {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        .user-icon {
+            @include userIcon;
+            background: #8EB6BA;
+            color: #ffffff;
+        }
+        .autor {
+            font-size: .8rem;
+            margin-left: 5px;
+            color: $fontColor;
+            a{
+    	    	text-transform: none !important;
+            }
+        }
+        .like{
+        	margin-left: auto;
+            transition: all .2s;
+        	color: #ADADAD;
+            font-size: 1.8rem;
+        	cursor: pointer;
+            &:hover{
+                color: #CC3619;
+            }
+        }
+        .more{
+            cursor: pointer;
+            transition: all .2s;
+            margin-left: auto;
+            margin-left: 5px;
+            color: #ADADAD;
+            font-size: 1.8rem;
+            &:hover{
+                color: #ffab40;
+            }
+        }
+    }
+}

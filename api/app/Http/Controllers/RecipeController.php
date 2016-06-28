@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Recipe;
 use Tymon\JWTAuth\Facades\JWTAuth;
 use Validator;
+use Storage;
 
 class RecipeController extends Controller
 {
@@ -40,18 +42,27 @@ class RecipeController extends Controller
     public function store(Request $request)
     {
 
-        // Valido
-        $validator = Validator::make($request->all(), [
-            "name" => "required|max:255",
-            "description" =>"required"
-        ]);
-        if($validator->fails()){
-            return response()->json(['error' =>'Invalid_fields'], 401);
-        }
-        // Guardo
-        Recipe::create($request->all());
+        //$file = $request->file('image');
+        //Recipe::create($request->all());
         // Confirmo
-        return response()->json(["mensaje"=>"Receta creada correctamente"]);
+        $validator = Validator::make($request->all(),[
+            'file' => 'image'
+        ]);
+        $file = $request->file('file');
+        $path = public_path()."/uploads";
+        $fileName = str_random('16') . '.' . $file->getClientOriginalExtension();
+        $file->move($path, $fileName);
+
+        if(!$validator->fails()){
+            return 'fallo';
+        }
+
+        return $request->all();
+
+        
+
+        // and you can continue to chain methods
+        //$user = JWTAuth::parseToken()->authenticate();
     }
 
     /**

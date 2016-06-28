@@ -48,13 +48,12 @@ class CategoryTableSeeder extends Seeder
     public function run()
     {
         DB::table('categories')->delete();
-        Category::create(array('name' => 'desayuno'));
-        Category::create(array('name' => 'almuerzo'));
-        Category::create(array('name' => 'plato caliente'));
-        Category::create(array('name' => 'plato frio'));
-        Category::create(array('name' => 'cena'));
-        Category::create(array('name' => 'postre'));
-        Category::create(array('name' => 'sopa'));
+        Category::create(array('name' => 'Carnes'));
+        Category::create(array('name' => 'Pastas'));
+        Category::create(array('name' => 'Tartas'));
+        Category::create(array('name' => 'Pescados'));
+        Category::create(array('name' => 'Sopas'));
+        Category::create(array('name' => 'Postres'));
     }
 }
 class LevelTableSeeder extends Seeder
@@ -72,9 +71,10 @@ class UserTableSeeder extends Seeder
     {
         DB::table('users')->delete();
         User::create(array(
-            'name' => 'fran',
-            'email' => 'fran@gmail.com',
-            'password' => \Illuminate\Support\Facades\Hash::make('12345678')
+            'name' => 'admin',
+            'email' => 'admin@admin.com',
+            'password' => \Illuminate\Support\Facades\Hash::make('1234'),
+            'level_id' => 1
             )
         );
     }

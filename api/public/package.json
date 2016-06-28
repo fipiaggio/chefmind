@@ -1,0 +1,36 @@
+{
+  "name": "chefmind",
+  "version": "1.0.0",
+  "description": "Aplicación para consultar y compartir recetas",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fipiaggio/chefmind.git"
+  },
+  "author": "fpiaggio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fipiaggio/chefmind/issues"
+  },
+  "homepage": "https://github.com/fipiaggio/chefmind#readme",
+  "devDependencies": {
+    "angular": "^1.5.7",
+    "angular-animate": "^1.5.7",
+    "angular-cookies": "^1.5.7",
+    "angular-file-upload": "^2.3.4",
+    "angular-resource": "^1.5.7",
+    "angular-toastr": "^1.7.0",
+    "angular-ui-router": "^0.3.1",
+    "browser-sync": "^2.12.10",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-sass": "^2.3.1",
+    "jquery": "^3.0.0",
+    "ng-file-upload": "^12.0.4",
+    "ng-toast": "^2.0.0",
+    "satellizer": "^0.14.1"
+  }
+}

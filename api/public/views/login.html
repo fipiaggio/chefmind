@@ -1,0 +1,54 @@
+<!-- Chefmind Styles -->
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/style.css">
+<div class="container_title">
+    <div class="container">
+        <div class="col s12">
+            <h3 class="left encabezado">Login</h3>
+        </div>
+    </div>
+</div>
+<div ng-controller="loginCtrl" class="section no-pad-bot main-banner login" id="index-banner">
+    <div class="container container_login">
+        <div class="container z-depth-1" id="contenedor">
+            <div class="row1 center">
+                <h5 class="valign">Ingreso</h5>
+            </div>
+            <div class="row">
+                <form class="col s12">
+                    <div class="rows">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">perm_identity</i>
+                            <input ng-model="loginForm.email" id="icon_prefix" type="text" class="validate">
+                            <label for="icon_prefix">Nombre de usuario</label>
+                        </div>
+                    </div>
+                    <div class="rows">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">lock</i>
+                            <input ng-model="loginForm.password"  id="password" type="password" class="validate">
+                            <label for="password" data-error="wrong" data-success="Válido">Contrase&ntilde;a</label>
+                        </div>
+                    </div>
+                    <div class="rows">
+                        <div class="col s12">
+                            <div class="col s6 center-align">
+                                <ul class="hide-on-med-and-down">
+                                    <li><a href="#">¿Olvidaste tu contraseña?</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container center-align">
+                        <div class="input-field col s12">
+                            <button ng-click="login()" class="btn waves-effect waves-light" type="submit" name="action">Ingresa
+                                <i class="material-icons send right"></i>
+                            </button>
+                            <a href="registro.html" class="waves-effect waves-light btn botones">Registrar</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

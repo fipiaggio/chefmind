@@ -1,0 +1,123 @@
+<!-- Chefmind Styles -->
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/estilo2.css">
+<div class="section-heading">
+    <div class="container">
+        <h4 class="title">Subir receta</h4>
+    </div>
+</div>
+<div ng-controller="uploadRecipeCtrl" class="main-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m9 encabezado-subir">
+                <h5>¡Completá todos los campos correctamente para poder compartir tu receta con los demás cocineros ! </h5>
+            </div>
+            <div class="col s12 m12" id="contenedor-form">
+                <form enctype="multipart/form-data" ng-submit="saveRecipe()" class="col s12">
+                    <div class="row">
+                        <div class="row col s12 m9">
+                            <h5>Nombre de la receta</h5>
+                            <div class="input-field col s12 m11">
+                                <input ng-model="recipe.name" id="nombre_receta" type="text" class="validate">
+                                <label for="nombre_receta">Ingrese el nombre de la receta</label>
+                            </div>
+                        </div>
+                        <div class="row col m2 s12" id="subir-foto">
+                            <h5>Foto de la receta</h5>
+                            <img src="img/cuadro.png" alt="cuadro" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h5>Descripción de la receta</h5>
+                        <div class="input-field col s12 m12">
+                            <textarea ng-model="recipe.description" id="textarea1" class="materialize-textarea"></textarea>
+                            <label for="textarea1">Descripción receta</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h5>Ingredientes</h5>
+                        <div class="input-field col s12 m12">
+                            <input id="ingredientes" type="text" class="validate">
+                            <label for="ingredientes">Ingrese los ingredientes</label>
+                            <div class="row right-align">
+                                <a class="waves-effect waves-light btn botones">AGREGAR Ingrediente</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h5>Duración</h5>
+                        <div class="input-field col s12 m12">
+                            <label for="input_starttime">Ingrese la duración de la receta</label>
+                            <input ng-model="recipe.time" id="input_starttime" input-clock data-twelvehour="false" type="text">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h5>Comensales</h5>
+                        <div input-field>
+                            <select ng-model="recipe.persons" material-select>
+                                <option ng-repeat="value in select.personas">{{value}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h5>Dificultad</h5>
+                        <div input-field>
+                            <select ng-model="recipe.dificulty" material-select>
+                                <option ng-repeat="value in select.choices">{{value}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h5>Categoría</h5>
+                        <div input-field>
+                            <select ng-model="recipe.category" ng-options="category.name for category in categories" material-select>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h5>Costo</h5>
+                        <div class="input-field col s12 m12">
+                            <div input-field>
+                                <select ng-model="recipe.cost" material-select>
+                                    <option ng-repeat="value in select.cost">{{value}}</option>
+                                </select>
+                            </div>
+                            <!--select ng-model="recipe.cost">
+                                <option value="" disabled selected>Hacé click para elegir el costo</option>
+                                <option value="bajo">Bajo</option>
+                                <option value="medio">Medio</option>
+                                <option value="Alto">Alto</option>
+                            </select-->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h5>Foto</h5>
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>File</span>
+                                <input type="file" file-model="image" >
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h5>Preparación</h5>
+                        <div class="input-field col s12 m12">
+                            <input id="paso" type="text" class="validate">
+                            <label for="paso">Escribí un paso</label>
+                            <div class="row right-align">
+                                <a class="waves-effect waves-light btn botones">AGREGAR PASO</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:150px;">
+                        <input type="submit" value="PUBLICAR RECETA" class="waves-effect waves-light btn botones">
+                    </div>
+                </form>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>

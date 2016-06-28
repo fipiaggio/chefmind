@@ -17,9 +17,10 @@ class CreateRecipesTable extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('img');
-            $table->integer('dificulty')->nullable()->unsigned();
+            $table->string('dificulty');
             $table->string('time');
-            $table->integer('people')->nullable()->unsigned();
+            $table->string('cost');
+            $table->string('people');
             $table->integer('user_id')->nullable()->unsigned();
             $table->integer('category_id')->nullable()->unsigned();
             $table->timestamps();

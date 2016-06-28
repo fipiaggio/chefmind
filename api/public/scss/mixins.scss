@@ -1,0 +1,36 @@
+// Dispositivos
+@mixin mobile {
+    @media (max-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{desktop-width -1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media(min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+// Custom inputs
+@mixin searchInput {
+    background: #ffffff;
+    padding: 0.5rem;
+    color: #A09F9F;
+    border: 1px solid #aaaaaa;
+    border-bottom: 5px solid #B5B5B5;
+}
+
+// User Icon
+@mixin userIcon {
+    background: #ffffff;
+    color: #AFA061;
+    display: flex;
+    padding: 5px;
+    border-radius: 50%;
+}

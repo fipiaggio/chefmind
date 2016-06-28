@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Categorie;
+use App\Category;
 
 class CategorieController extends Controller
 {
@@ -17,18 +17,10 @@ class CategorieController extends Controller
      */
     public function index()
     {
-        //
+       $user = User::all();
+        return response()->json($user->toArray());
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.

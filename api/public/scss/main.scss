@@ -1,0 +1,43 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+// Variables globales
+@import "variables";
+// Mixins
+@import "mixins";
+// Componentes generales
+@import "main_components/nav";
+@import "main_components/cardReceta";
+// Páginas
+@import "pages/home";
+@import "pages/admin";
+@import "pages/categorias";
+@import "pages/recetaDetalle";
+@import "pages/contacto";
+@import "pages/faq";
+
+// Eze/Tobi
+// Estilos a ordernar
+//@import "pages/forms";
+
+
+// Clases generales
+.color-text{
+	color: $fontColor;
+}
+.margin-center{
+	margin: 0px auto;
+}
+.section-heading{
+	background: #C6BFAB;
+	color: #ffffff;
+	.title{
+		margin: 0;
+		padding: 10px 0;
+	}
+}
+.row{
+	margin-bottom: 0;
+}

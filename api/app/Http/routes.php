@@ -11,7 +11,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::group(['middleware' => 'cors'], function(){
@@ -20,4 +20,5 @@ Route::group(['middleware' => 'cors'], function(){
 	Route::post('/auth_register', 'AuthenticateController@register');
 	Route::resource('recipes', 'RecipeController');
 	Route::resource('users', 'UserController');
+	Route::resource('categories', 'CategoryController');
 });

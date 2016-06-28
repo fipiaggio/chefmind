@@ -1,0 +1,203 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+.material-icons {
+    color: #7F7F7E;
+}
+
+.user-header {
+    min-height: 72px;
+}
+
+.iconss {
+    min-height: 45px;
+}
+
+.iconss i {
+    margin: 0 auto;
+    position: relative;
+    left: 10px;
+}
+
+.material-icons:hover {
+    color: #fff;
+}
+
+.material-icons-card {
+    margin-top: 12px;
+}
+
+.icons-card:hover {
+    color: #A1C4C3;
+}
+
+.icon {
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+.user-icon i:hover {
+    color: #A1C4C3;
+    cursor: pointer;
+}
+
+.input {
+    margin-top: 6px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.input-field .btn .send {
+    color: #fff;
+}
+
+
+/*.title{
+	font-size:1em;
+}
+*/
+
+.btn {
+    background-color: : #E5DDC4;
+}
+
+.btn:hover {
+    background-color: : #3A7A80;
+}
+
+form {
+    margin-top: 10px;
+}
+
+#index-banner,
+.container_title {
+    color: #B9C1C1;
+    background-color: : #A1C4C3;
+}
+
+#index-banner {
+    /*background-color:#3A7A80;*/
+    background-color: rgba(58, 122, 128, 0.6);
+}
+
+buttom {
+    background-color: : #A1C4C3;
+}
+
+.container_title {
+    min-height: 80px;
+    font-size: 2em;
+    background-color: #B9B29E;
+    color: #E5DDC4;
+}
+
+.container_title div h3 {
+    font-size: 1em;
+}
+
+.flow-text {
+    max-height: 80px;
+    font-size: 2em;
+    background-color: #B9B29E;
+    color: #E5DDC4;
+}
+
+.container_login {
+    max-width: 700px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.left {
+    color: #E5DDC4;
+}
+
+.row .col {
+    padding: 0px;
+}
+
+.rows {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.row1 {
+    padding: 10px;
+    background-color: #EBE6D0;
+    color: #9E9E9E;
+    border-radius: 5px 5px 0px 0px;
+}
+
+#contenedor {
+    min-width: 160px;
+    min-height: 350px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.btn {
+    margin-bottom: 30px;
+}
+
+.card {
+    margin-top: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    padding-top: 10px;
+}
+
+.card-image {
+    padding: 10px;
+}
+
+.card .card-title {
+    font-size: 1.1rem;
+}
+
+.card-content {
+    margin-bottom: 0px;
+}
+
+.admin-container {
+    background-image: url('img/background/contacto.png');
+}
+
+
+
+/*   ESTILOS TOBI   */
+#contenedor-form form div.row h5, #subir-foto{
+    color: #878787;
+    padding-bottom: 1%;
+}
+
+#subir-foto img{
+    padding-top:5%;
+}
+
+.main-banner {
+    background: #F2F2F2;
+}
+
+.botones {
+        background: #c6bfab;
+}
+
+.botones:hover {
+    background: #A9A393;
+}
+
+.dropdown-content li > a, .dropdown-content li > span{
+color: #878787;
+}
+
+.select-dropdown li.disabled, .select-dropdown li.disabled > span, .select-dropdown li.optgroup{
+color: rgba(135, 135, 135, 0.76);
+}
+
+.encabezado-subir{
+    padding: 3% 0% 3% 0%!important;
+}
