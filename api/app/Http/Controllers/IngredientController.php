@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Ingredient;
 use App\Recipe;
+use Log;
 
 class IngredientController extends Controller
 {
@@ -72,8 +73,30 @@ class IngredientController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        //
+    {   
+        
+    
+        /*$ingredients = $request->all();
+        forEach($ingredients as $ingredient){
+            Log::info($ingredient['text']);
+        }
+        return gettype($ingredients);*/
+
+        \DB::table('ingredient_recipe')->where('recipe_id', '=', $id)->delete();
+        $recipe = Recipe::find($id);
+        $ingredients = $request->all();
+        foreach($ingredients as $ingredient){
+            if (Ingredient::where('name', '=', $ingredient['text'])->exists()) {
+                $dbIngredient = Ingredient::where('name', '=', $ingredient['text'])->get();
+                $recipe->ingredients()->attach($dbIngredient[0]->id);
+            }else{
+                $newIngredient = new Ingredient;
+                $newIngredient->name = $ingredient['text'];
+                $newIngredient->save();
+                $recipe->ingredients()->attach($newIngredient->id);
+            }                    
+        };
+        return $request->all();
     }
 
     /**

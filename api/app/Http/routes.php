@@ -16,13 +16,14 @@ Route::get('/', function () {
 
 Route::group(['middleware' => 'cors'], function(){
 	Route::post('/auth_login', 'AuthenticateController@userAuth');
-	//$router->post('/auth_register', 'AuthenticateController@register');
 	Route::post('/auth_register', 'AuthenticateController@register');
 	Route::resource('recipes', 'RecipeController');
 	Route::resource('users', 'UserController');
 	Route::resource('categories', 'CategoryController');
 	Route::resource('steps', 'StepController');
+	Route::resource('ingredients', 'ingredientController');
 	Route::get('image/{name?}', 'ImageController@getImage');
+	Route::post('replaceImage', 'ImageController@replaceImage');
 	Route::get('ingredient/{name?}', 'IngredientController@getIngredient');
 	Route::get('recipeIngredients/{recipe?}', 'IngredientController@getIngredientByRecipe');
 	Route::get('userRecipes', 'RecipeController@getRecipeByUser');

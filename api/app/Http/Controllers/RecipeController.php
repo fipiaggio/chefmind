@@ -116,16 +116,7 @@ class RecipeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return $request->all();
         $recipe = Recipe::find($id);
-        $recipe->name = $request->name;
-        $recipe->description = $request->description;
-        $recipe->img = $fileName;
-        $recipe->dificulty = $request->dificulty;
-        $recipe->time = $request->time;
-        $recipe->cost = $request->cost;
-        $recipe->people = $request->people;
-        $recipe->user_id = $user->id;
         $recipe->update($request->all());
         return response()->json(['success'], 200);
     }
@@ -197,16 +188,8 @@ class RecipeController extends Controller
         
         $input = array_map("unserialize", array_unique(array_map("serialize", $finalResultRecipes)));
 
-        //$ingredients = \DB::table('ingredients')->where('name', '=', $test)->get();
         return $input;
-        /*$recipes = array();
-        $tags = \DB::table('ingredient_recipe')->where('recipe_id', '=', $id)->get();
-        forEach($tags as $tag){
-            $ingredient = Ingredient::find($tag->ingredient_id);
-            array_push($recipeIngredients, $ingredient);
-        }
-        return $recipeIngredients;
-        */
+
     }
 
 

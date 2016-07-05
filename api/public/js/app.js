@@ -128,17 +128,19 @@ angular
                 });
         }
     })
-    .service('fileEditUpload', function($http, toastr, $state) {
-        this.uploadFileToUrl = function(file, uploadUrl) {
+    .service('fileEditUpload', function($http, toastr, $state, $rootScope) {
+        this.uploadFileToUrl = function(file, uploadUrl, fileName) {
             var fd = new FormData();
             fd.append('file', file);
-            $http.put(uploadUrl, fd, {
+            fd.append('name', fileName);
+            $http.post(uploadUrl, fd, {
                     transformRequest: angular.identity,
                     headers: { 'Content-Type': undefined }
                 })
                 .success(function(response) {
                     //$state.go('admin');
-                    //toastr.success('Receta creada con éxito', 'Gracias!');
+                    toastr.success('Foto actualizada');
+                    $rootScope.$emit('fotoActualizada');
                     console.log(response);
                 })
                 .error(function(response) {

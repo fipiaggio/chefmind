@@ -88,17 +88,20 @@
                     </div>
                     <div class="row">
                         <h5>Foto</h5>
-                        <img ng-src="image/{{recipe.img}}" alt="">
+                        <img ng-if="!showNewImage" ng-src="image/{{recipe.img}}" alt="">
+                        <img ng-if="showNewImage" ng-src="{{newUrl}}" alt="">
                         <div ng-show="upload" class="file-field input-field">
                             <div class="btn">
                                 <span>Subir imagen</span>
                                 <input type="file" file-model="image" >
                             </div>
                             <div class="file-path-wrapper">
-                                <input class="file-path validate col s9" type="text">
-                                <input type="button"  value="Subir" class="waves-effect waves-light btn botones">
+                                <input class="file-path validate col s12" type="text">
                             </div>
-                        </div><br>
+                        </div>
+                        <div ng-show="upload" class="row right-align">
+                            <a ng-hide="step === ''" class="waves-effect waves-light btn botones" ng-click="changeImage()">Cambiar foto</a>
+                        </div> <br>
                         <input type="button" ng-show="!upload" ng-click="upload = true" value="Cambiar imagen" class="waves-effect waves-light btn botones">
                     </div>
                     <div class="row">

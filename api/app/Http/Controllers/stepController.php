@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Recipe;
+use App\Step;
+use Log;
 
 class stepController extends Controller
 {
@@ -70,8 +73,21 @@ class stepController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        //
+    {   
+
+        \DB::table('steps')->where('recipe_id', '=', $id)->delete();
+
+
+        $steps = array();
+        $recipe = Recipe::find($id);
+        forEach($request->all() as $step){
+                $newStep = new Step;
+                $newStep->description = $step['description'];
+                $newStep->recipe_id = $id;
+                $newStep->save();
+            };
+        
+        return $request->all();
     }
 
     /**
