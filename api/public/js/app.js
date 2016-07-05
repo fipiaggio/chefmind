@@ -8,6 +8,7 @@ angular
         'ngAnimate',
         'toastr',
         'authService',
+        'ngTagsInput',
         'ngFileUpload'
     ])
     .config(function($stateProvider, $urlRouterProvider, $authProvider) {
@@ -15,7 +16,8 @@ angular
         $stateProvider
             .state('app', {
                 url: '/',
-                templateUrl: 'views/home.html'
+                templateUrl: 'views/home.html',
+                controller: 'homeCtrl'
             })
             .state('categorias', {
                 url: '/categorias',
@@ -42,10 +44,10 @@ angular
                 url: '/admin',
                 templateUrl: 'views/misrecetas.html'
             })
-            .state('misrecetas', {
+            /*.state('misrecetas', {
                 url: '/misrecetas',
                 templateUrl: 'views/misrecetas.html'
-            })
+            })*/
             .state('configuracion', {
                 url: '/configuracion',
                 templateUrl: 'views/configuracion.html'
@@ -54,6 +56,24 @@ angular
                 url: '/subir-receta',
                 templateUrl: 'views/subir-receta.html',
                 controller: 'uploadRecipeCtrl'
+            })
+            .state('recipe',{
+                url: '/recipe/:id',
+                templateUrl: 'views/receta.html',
+                controller: 'recipeCtrl'
+            })
+            .state('edit',{
+                url: '/edit/:id',
+                templateUrl: 'views/edit.html',
+                controller: 'editRecipeCtrl'
+            })
+            .state('list',{
+                url: '/list',
+                params:{
+                    obj:null
+                },
+                templateUrl: 'views/listado.html',
+                controller: 'listRecipesCtrl'
             })
         $urlRouterProvider.otherwise('/');
     })
@@ -69,49 +89,61 @@ angular
     .constant('CONFIG', {
         APIURL: "http://localhost:8000/"
     })
-    .directive('fileModel', ['$parse', function ($parse) {
-    return {
-        restrict: 'A',
-        link: function(scope, element, attrs) {
-            var model = $parse(attrs.fileModel);
-            var modelSetter = model.assign;
+    .directive('fileModel', ['$parse', function($parse) {
+        return {
+            restrict: 'A',
+            link: function(scope, element, attrs) {
+                var model = $parse(attrs.fileModel);
+                var modelSetter = model.assign;
 
-            element.bind('change', function(){
-                scope.$apply(function(){
-                    modelSetter(scope, element[0].files[0]);
+                element.bind('change', function() {
+                    scope.$apply(function() {
+                        modelSetter(scope, element[0].files[0]);
+                    });
                 });
-            });
-        }
-    }
-}])
-.directive('fileModel', ['$parse', function ($parse) {
-    return {
-        restrict: 'A',
-        link: function(scope, element, attrs) {
-            var model = $parse(attrs.fileModel);
-            var modelSetter = model.assign;
-            
-            element.bind('change', function(){
-                scope.$apply(function(){
-                    modelSetter(scope, element[0].files[0]);
+            }
+        };
+    }])
+    .service('fileUpload', function($http, toastr, $state) {
+        this.uploadFileToUrl = function(file, uploadUrl, data, steps, ing) {
+            var fd = new FormData();
+            fd.append('file', file);
+            fd.append('steps', JSON.stringify(steps));
+            fd.append('ingredients', JSON.stringify(ing));
+            for (var key in data) {
+                fd.append(key, data[key]);
+            }
+            $http.post(uploadUrl, fd, {
+                    transformRequest: angular.identity,
+                    headers: { 'Content-Type': undefined }
+                })
+                .success(function(response) {
+                    $state.go('admin');
+                    toastr.success('Receta creada con éxito', 'Gracias!');
+                    console.log(response);
+                })
+                .error(function(response) {
+                    console.log(response);
+                    //toastr.error(response.data.error);
                 });
-            });
         }
-    };
-}])
-.service('fileUpload', ['$http', function ($http) {
-    this.uploadFileToUrl = function(file, uploadUrl, data){
-        var fd = new FormData();
-        fd.append('file', file);
-        $http.post(uploadUrl, fd, {
-            transformRequest: angular.identity,
-            headers: {'Content-Type': undefined}
-        })
-        .success(function(response){
-        	console.log(response)
-        })
-        .error(function(response){
-        	console.log(response)
-        });
-    }
-}]);
+    })
+    .service('fileEditUpload', function($http, toastr, $state) {
+        this.uploadFileToUrl = function(file, uploadUrl) {
+            var fd = new FormData();
+            fd.append('file', file);
+            $http.put(uploadUrl, fd, {
+                    transformRequest: angular.identity,
+                    headers: { 'Content-Type': undefined }
+                })
+                .success(function(response) {
+                    //$state.go('admin');
+                    //toastr.success('Receta creada con éxito', 'Gracias!');
+                    console.log(response);
+                })
+                .error(function(response) {
+                    console.log(response);
+                    //toastr.error(response.data.error);
+                });
+        }
+    });

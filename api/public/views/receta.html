@@ -1,0 +1,87 @@
+    <link rel="stylesheet" href="css/main.css">
+    <div class="section-heading">
+        <div class="container">
+            <h4 class="title">Recetas</h4>
+        </div>
+    </div>
+    <div class="section no-pad-bot main-banner receta-detalle">
+        <div class="container detalle">
+            <div class="row">
+                <div class="col l5">
+                    <div class="title-container">
+                        <h2 class="titulo-receta">{{recipe.name}}</h2>
+                    </div>
+                    <div class="autor-container">
+                        <div class="user-icon">
+                            <i class="material-icons">perm_identity</i>
+                        </div>
+                        <p class="autor">Creada por <a href="#">{{author}}</a></p>
+                    </div>
+                    <p class="des">                        
+                        {{recipe.description}}
+                    </p>
+                    <div class="actions">
+                        <div>
+                            <a class="favs" href="#">
+                                <i class="mdi mdi-heart like"></i>
+                                <p> Agregar a favoritos </p>
+                            </a>
+                        </div>
+                        <div>
+                            <a class="share" href="#">
+                                <i class="mdi mdi-share-variant"></i>
+                                <p> Compartir </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l7 imagen-receta">
+                    <img ng-src="image/{{recipe.img}}" alt="foto principal de la receta">
+                </div>
+            </div>
+        </div>
+        <div class="caracteristicas">
+            <div class="container">
+                <div ng-if="recipe.dificulty != undefined" class="caracteristica">
+                    <i class="mdi mdi-square-inc"></i>
+                    <i class="mdi mdi-crop-square"></i>
+                    <i class="mdi mdi-crop-square"></i>
+                    <p> {{recipe.dificulty}} </p>
+                </div>
+                <div ng-if="recipe.time != undefined" class="caracteristica">
+                    <i class="mdi mdi-clock"></i>
+
+                    <p> {{recipe.time}}hs </p>
+                </div>
+                <div ng-if="recipe.people != undefined" class="caracteristica">
+                    <i class="mdi mdi-account-multiple"></i>
+                    <p> {{recipe.people}}</p>
+                </div>
+                <div ng-if="recipe.cost != undefined" class="caracteristica">
+                    <i class="mdi mdi-cash"></i>
+                    <p> {{recipe.cost}} </p>
+                </div>
+            </div>
+        </div>
+        <div class="pasos-container">
+            <div class="container">
+                <h5 class="titulo-ingredientes">Ingredientes</h5>
+                <ul class="ingredientes">
+                    <li ng-repeat="ingredient in ingredients">{{ingredient.name}}</li>
+                </ul>
+                <h5 class="titulo-ingredientes">Pasos</h5>
+                <ol>
+                    <li ng-repeat="step in steps">{{step.description}}</li>
+                </ol>
+                <div class="share">
+                    <p>Compartir en: </p>
+                    <ul>
+                        <li><a href="#"><i class="mdi mdi-twitter-circle"></i></a></li>
+                        <li><a href="#"><i class="mdi mdi-facebook-box"></i></a></li>
+                        <li><a href="#"><i class="mdi mdi-pinterest-box"></i></a></li>
+                        <li><a href="#"><i class="mdi mdi-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>

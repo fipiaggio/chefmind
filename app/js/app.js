@@ -6,6 +6,7 @@ angular
 		'satellizer',
 		'ngAnimate',
 		'toastr',
+		'ngTagsInput',
 		'authService'
 	])
 	.config(function($stateProvider, $urlRouterProvider, $authProvider){

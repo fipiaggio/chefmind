@@ -7,8 +7,11 @@
             <div class="col s12 search-container">
                 <form method="post" action="listado.html" class="search-box margin-center">
                     <div class="input-search-field">
+                        <tags-input ng-model="ingredients">
+                            <auto-complete source="loadTags($query)"></auto-complete>
+                        </tags-input>
                         <input id="search" type="search" placeholder="Ingresa los ingredientes que posees">
-                        <label for="search"><a href="listado.html"><i class="material-icons">search</i></a></label>
+                        <label for="search"><a ng-click="search()"><i class="material-icons">search</i></a></label>
                     </div>
                 </form>
             </div>

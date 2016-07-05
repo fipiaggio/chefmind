@@ -27,11 +27,12 @@ class Recipe extends Model
 
 	public function ingredients()
 	{
-		return $this->belongsToMany('App\Ingredient');
+		return $this->belongsToMany('App\Ingredient', 'ingredient_recipe');
 	}
 
     public function steps()
     {
         return $this->hasMany('App\Step');
     }
+
 }

@@ -8,9 +8,14 @@ use Illuminate\Support\Facades\File;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Recipe;
+use App\Step;
+use App\User;
+use App\Ingredient;
 use Tymon\JWTAuth\Facades\JWTAuth;
 use Validator;
 use Storage;
+use Input;
+use Log;
 
 class RecipeController extends Controller
 {
@@ -19,7 +24,7 @@ class RecipeController extends Controller
     {
         // Vistas autorizadas
         // Menos Index
-        $this->middleware('jwt.auth', ['except' => ['index', 'store', 'destroy', 'show']]);
+        $this->middleware('jwt.auth', ['except' => ['index', 'store', 'destroy', 'show', 'getStepByRecipes', 'getRecipeByIngredients']]);
     }
 
     /**
@@ -41,28 +46,50 @@ class RecipeController extends Controller
      */
     public function store(Request $request)
     {
+        $user = JWTAuth::parseToken()->authenticate();
+        if($user){
+            if(Input::hasFile('file')){
+                $file = $request->file('file');
+                $steps = json_decode($request->steps);
+                $ingredients = json_decode($request->ingredients);
 
-        //$file = $request->file('image');
-        //Recipe::create($request->all());
-        // Confirmo
-        $validator = Validator::make($request->all(),[
-            'file' => 'image'
-        ]);
-        $file = $request->file('file');
-        $path = public_path()."/uploads";
-        $fileName = str_random('16') . '.' . $file->getClientOriginalExtension();
-        $file->move($path, $fileName);
+                $path = public_path()."/uploads";
+                $fileName = time().'-'.$file->getClientOriginalName();
+                $file->move($path, $fileName);
 
-        if(!$validator->fails()){
-            return 'fallo';
+                $recipe = new Recipe;
+                $recipe->name = $request->name;
+                $recipe->description = $request->description;
+                $recipe->img = $fileName;
+                $recipe->dificulty = $request->dificulty;
+                $recipe->time = $request->time;
+                $recipe->cost = $request->cost;
+                $recipe->people = $request->people;
+                $recipe->user_id = $user->id;
+                $recipe->save();
+
+                foreach($steps as $step){
+                    $newStep = new Step;
+                    $newStep->description = $step->description;
+                    $newStep->recipe_id = $recipe->id;
+                    $newStep->save();
+                };
+
+                foreach($ingredients as $ingredient){
+                    if (Ingredient::where('name', '=', $ingredient->text)->exists()) {
+                        $dbIngredient = Ingredient::where('name', '=', $ingredient->text)->get();
+                        $recipe->ingredients()->attach($dbIngredient[0]->id);
+                    }else{
+                        $newIngredient = new Ingredient;
+                        $newIngredient->name = $ingredient->text;
+                        $newIngredient->save();
+                        $recipe->ingredients()->attach($newIngredient->id);
+                    }                    
+                };
+                return response()->json(['Receta creada correctamente'], 200);
+            }
+            return response()->json(['error' =>'Falta cargar imagen'], 401);
         }
-
-        return $request->all();
-
-        
-
-        // and you can continue to chain methods
-        //$user = JWTAuth::parseToken()->authenticate();
     }
 
     /**
@@ -89,7 +116,16 @@ class RecipeController extends Controller
      */
     public function update(Request $request, $id)
     {
+        return $request->all();
         $recipe = Recipe::find($id);
+        $recipe->name = $request->name;
+        $recipe->description = $request->description;
+        $recipe->img = $fileName;
+        $recipe->dificulty = $request->dificulty;
+        $recipe->time = $request->time;
+        $recipe->cost = $request->cost;
+        $recipe->people = $request->people;
+        $recipe->user_id = $user->id;
         $recipe->update($request->all());
         return response()->json(['success'], 200);
     }
@@ -106,4 +142,72 @@ class RecipeController extends Controller
         $recipe->delete();
         return response()->json(['success'], 200);
     }
+
+    public function getStepsByRecipes($id)
+    {
+        $steps = Step::where('recipe_id', $id)->get();
+        return $steps;
+    }
+
+    public function getRecipeByUser()
+    {
+        $user = JWTAuth::parseToken()->authenticate();
+        if($user){
+            $suser = User::find($user->id);
+            $recipes = $suser->recipes()->get();
+            return $recipes;
+        }
+    }
+
+    public function getRecipeByIngredients(Request $request)
+    {
+        // Separo ingredientes
+        $ingredients = array();
+        forEach($request->all() as $ingredient){
+            $dbIngredient = \DB::table('ingredients')->where('name', '=', $ingredient['text'])->get();
+            array_push($ingredients, $dbIngredient);
+        };
+
+        // Busco en la tabla pivot
+        $pivotIngredients = array();
+        forEach($ingredients as $ingredient){
+            forEach($ingredient as $ing){
+            $pivotIngredient = \DB::table('ingredient_recipe')->where('ingredient_id', '=', json_encode($ing->id))->get();
+            array_push($pivotIngredients, $pivotIngredient); 
+            }
+           
+        }
+
+        // Separo resultados
+        $resultRecipes = array();
+        forEach($pivotIngredients as $pi){
+            forEach($pi as $p){
+                $recipeWithTag = \DB::table('recipes')->where('id', '=', json_encode($p->recipe_id))->get();
+                array_push($resultRecipes, $recipeWithTag); 
+            }
+        }
+
+        // Preparo recetas para la respuesta
+        $finalResultRecipes = array();
+        forEach($resultRecipes as $resultRecipe){
+            forEach($resultRecipe as $finalRecipe){
+                array_push($finalResultRecipes, $finalRecipe);
+            }
+        }
+        
+        $input = array_map("unserialize", array_unique(array_map("serialize", $finalResultRecipes)));
+
+        //$ingredients = \DB::table('ingredients')->where('name', '=', $test)->get();
+        return $input;
+        /*$recipes = array();
+        $tags = \DB::table('ingredient_recipe')->where('recipe_id', '=', $id)->get();
+        forEach($tags as $tag){
+            $ingredient = Ingredient::find($tag->ingredient_id);
+            array_push($recipeIngredients, $ingredient);
+        }
+        return $recipeIngredients;
+        */
+    }
+
+
 }

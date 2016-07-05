@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Ingredient;
+use App\Recipe;
 
 class IngredientController extends Controller
 {
@@ -84,5 +85,19 @@ class IngredientController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function getIngredient($query){
+        $ingredient = Ingredient::where('name',  'LIKE', '%'.$query.'%')->get();
+        return response()->json($ingredient->toArray());
+    }
+    public function getIngredientByRecipe($id){
+        $recipeIngredients = array();
+        $tags = \DB::table('ingredient_recipe')->where('recipe_id', '=', $id)->get();
+        forEach($tags as $tag){
+            $ingredient = Ingredient::find($tag->ingredient_id);
+            array_push($recipeIngredients, $ingredient);
+        }
+        return $recipeIngredients;
     }
 }

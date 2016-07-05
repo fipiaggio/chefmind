@@ -21,4 +21,11 @@ Route::group(['middleware' => 'cors'], function(){
 	Route::resource('recipes', 'RecipeController');
 	Route::resource('users', 'UserController');
 	Route::resource('categories', 'CategoryController');
+	Route::resource('steps', 'StepController');
+	Route::get('image/{name?}', 'ImageController@getImage');
+	Route::get('ingredient/{name?}', 'IngredientController@getIngredient');
+	Route::get('recipeIngredients/{recipe?}', 'IngredientController@getIngredientByRecipe');
+	Route::get('userRecipes', 'RecipeController@getRecipeByUser');
+	Route::get('stepRecipes/{recipe?}', 'RecipeController@getStepsByRecipes');
+	Route::post('list/', 'RecipeController@getRecipeByIngredients');
 });

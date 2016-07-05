@@ -1,0 +1,34 @@
+    <div class="section no-pad-bot main-banner destacados" id="index-banner">
+        <div class="container">
+            <h2 class="titulo-destacadas">Recetas encontradas</h2>
+            <div class="row">
+                <div ng-repeat="recipe in recipes" class="col s12 m6 l4">
+                    <div class="card hoverable receta">
+                        <a class="right-align" href="receta.html">
+                           <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" alt="lomo al queso" ng-src="image/{{recipe.img}}">
+                        </div>
+                        </a>
+                        <div class="card-content">
+                            <div class="content">
+                                <p class="card-title activator grey-text text-darken-4">{{recipe.name}}
+                                </p>
+                                <p class="des">
+                                    {{recipe.description}}
+                                </p>
+                                <a class="right-align" ui-sref="recipe( {id:{{recipe.id}} })">Ver más...</a>
+                            </div>
+                        </div>
+                        <div class="card-action">
+                            <div class="user-icon">
+                                <i class="material-icons">perm_identity</i>
+                            </div>
+                            <p class="autor">Creada por <a href="#">{{author}}</a></p>
+                            <i class="mdi mdi-heart like"></i>
+                            <a class="right-align" href="receta.html"><i class="mdi mdi-eye more"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

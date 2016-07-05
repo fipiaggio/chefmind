@@ -1,10 +1,11 @@
 'use strict';
 
 angular.module('chefmindApp').controller('mainMenuCtrl', function($scope, $location, authUser){
+	$scope.isLogged = authUser.isLoggedIn();
+	
 	$scope.isActive = function(viewLocation){
 		return viewLocation === $location.path();
 	}
-	$scope.isLogged = authUser.isLoggedIn();
 
 	$scope.$watch(function(){
 		return authUser.isLoggedIn();

@@ -19,8 +19,8 @@ class CreateIngredientRecipeTable extends Migration
             
         });
         Schema::table('ingredient_recipe', function (Blueprint $table) {
-            $table->foreign('ingredient_id')->references('id')->on('ingredients');
-            $table->foreign('recipe_id')->references('id')->on('recipes'); 
+            $table->foreign('ingredient_id')->references('id')->on('ingredients')->onDelete('cascade');
+            $table->foreign('recipe_id')->references('id')->on('recipes')->onDelete('cascade'); 
         });
     }
 

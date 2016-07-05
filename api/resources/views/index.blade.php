@@ -14,6 +14,7 @@
     <!-- Notificaciones -->
     <link rel="stylesheet" href="node_modules/angular-toastr/dist/angular-toastr.min.css">
     <link rel="stylesheet" href="css/materialize.clockpicker.css">
+    <link rel="stylesheet" href="node_modules/ng-tags-input/build/ng-tags-input.min.css">
     <!-- Chefmind Styles -->
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -22,19 +23,19 @@
     <div class="navbar-fixed">
         <nav ng-controller="mainMenuCtrl" class="navbar-principal" role="navigation">
             <div class="nav-wrapper container">
-                <a href="index.html" class="logo-container">
+                <a ui-sref="home" class="logo-container">
                     <img class="logo-img" src="img/logo.png" alt="logo de chefmind">
                 </a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a ui-sref="app">Recetas</a></li>
-                    <li><a ui-sref="categorias">Categorías</a></li>
-                    <li><a ui-sref="contacto">Contacto</a></li>
-                    <li><a ui-sref="faq">FAQ</a></li>
-                    <li ng-hide="isLogged"><a ui-sref="login">Iniciar Sesión</a></li>
-                    <li ng-hide="isLogged"><a ui-sref="registro">Registrarme</a></li>
+                    <li ui-sref-active="active"><a ui-sref="app">Recetas</a></li>
+                    <li ui-sref-active="active"><a ui-sref="categorias">Categorías</a></li>
+                    <li ui-sref-active="active"><a ui-sref="contacto">Contacto</a></li>
+                    <li ui-sref-active="active"><a ui-sref="faq">FAQ</a></li>
+                    <li ui-sref-active="active" ng-hide="isLogged"><a ui-sref="login">Iniciar Sesión</a></li>
+                    <li ui-sref-active="active" ng-hide="isLogged"><a ui-sref="registro">Registrarme</a></li>
                     <li ng-if="isLogged" class="upload"><a ui-sref="subirReceta"><i class="material-icons left">mode_edit</i>Subir receta</a></li>
-                    <li ng-if="isLogged"><a ui-sref="admin">Perfil</a></li>
-                    <li ng-if="isLogged"><a ng-click="logout()">Salir</a></li>
+                    <li ui-sref-active="active" ng-if="isLogged"><a ui-sref="admin">Perfil</a></li>
+                    <li ui-sref-active="active" ng-if="isLogged"><a ng-click="logout()">Salir</a></li>
                 </ul>
                 <ul id="nav-mobile" class="side-nav">
                     <li class="active"><a href="index.html">Recetas</a></li>
@@ -94,6 +95,7 @@
     <script type="text/javascript" src="assets/angular-materialize.min.js"></script>
     <script type="text/javascript" src="node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js"></script>
     <script type="text/javascript" src="node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
+    <script type="text/javascript" src="node_modules/ng-tags-input/build/ng-tags-input.js"></script>
 
 
     <!-- App -->
@@ -101,6 +103,11 @@
     <script type="text/javascript" src="js/controllers/loginCtrl.js"></script>
     <script type="text/javascript" src="js/controllers/registerCtrl.js"></script>
     <script type="text/javascript" src="js/controllers/uploadRecipeCtrl.js"></script>
+    <script type="text/javascript" src="js/controllers/userRecipesCtrl.js"></script>
+    <script type="text/javascript" src="js/controllers/editRecipeCtrl.js"></script>
+    <script type="text/javascript" src="js/controllers/listRecipesCtrl.js"></script>
+    <script type="text/javascript" src="js/controllers/homeCtrl.js"></script>
+    <script type="text/javascript" src="js/controllers/recipeCtrl.js"></script>
     <script type="text/javascript" src="js/controllers/mainMenuCtrl.js"></script>
     <script type="text/javascript" src="js/services/authService.js"></script>
     <script>

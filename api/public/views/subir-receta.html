@@ -6,6 +6,7 @@
         <h4 class="title">Subir receta</h4>
     </div>
 </div>
+
 <div ng-controller="uploadRecipeCtrl" class="main-banner">
     <div class="container">
         <div class="row">
@@ -22,10 +23,10 @@
                                 <label for="nombre_receta">Ingrese el nombre de la receta</label>
                             </div>
                         </div>
-                        <div class="row col m2 s12" id="subir-foto">
+                        <!--div class="row col m2 s12" id="subir-foto">
                             <h5>Foto de la receta</h5>
                             <img src="img/cuadro.png" alt="cuadro" />
-                        </div>
+                        </div-->
                     </div>
                     <div class="row">
                         <h5>Descripción de la receta</h5>
@@ -37,8 +38,11 @@
                     <div class="row">
                         <h5>Ingredientes</h5>
                         <div class="input-field col s12 m12">
-                            <input id="ingredientes" type="text" class="validate">
-                            <label for="ingredientes">Ingrese los ingredientes</label>
+                            <tags-input ng-model="ingredients">
+                                <auto-complete source="loadTags($query)"></auto-complete>
+                            </tags-input>
+                            <!--input id="ingredientes" type="text" class="validate"-->
+                            <!--label for="ingredientes">Ingrese los ingredientes</label-->
                             <div class="row right-align">
                                 <a class="waves-effect waves-light btn botones">AGREGAR Ingrediente</a>
                             </div>
@@ -54,7 +58,7 @@
                     <div class="row">
                         <h5>Comensales</h5>
                         <div input-field>
-                            <select ng-model="recipe.persons" material-select>
+                            <select ng-model="recipe.people" material-select>
                                 <option ng-repeat="value in select.personas">{{value}}</option>
                             </select>
                         </div>
@@ -82,12 +86,6 @@
                                     <option ng-repeat="value in select.cost">{{value}}</option>
                                 </select>
                             </div>
-                            <!--select ng-model="recipe.cost">
-                                <option value="" disabled selected>Hacé click para elegir el costo</option>
-                                <option value="bajo">Bajo</option>
-                                <option value="medio">Medio</option>
-                                <option value="Alto">Alto</option>
-                            </select-->
                         </div>
                     </div>
                     <div class="row">
@@ -104,11 +102,14 @@
                     </div>
                     <div class="row">
                         <h5>Preparación</h5>
+                        <ol>
+                            <li ng-repeat="step in steps">{{step.description}} <a href="javascript:void(0)" ng-click="deleteStep($index)">Borrar</a></li>
+                        </ol>
                         <div class="input-field col s12 m12">
-                            <input id="paso" type="text" class="validate">
+                            <input ng-model="step" id="paso" type="text" class="validate">
                             <label for="paso">Escribí un paso</label>
                             <div class="row right-align">
-                                <a class="waves-effect waves-light btn botones">AGREGAR PASO</a>
+                                <a ng-hide="step === ''" class="waves-effect waves-light btn botones" ng-click="addStep()">AGREGAR PASO</a>
                             </div>
                         </div>
                     </div>

@@ -38,7 +38,7 @@ angular.module('authService', [])
                     console.log(response);
                     cacheSession(response.data.user.id, response.data.user.email, response.data.user.name, loginForm.avatar);
                     $state.go('admin');
-                    toastr.success('Bienvenido!', 'Chefmind');
+                    toastr.success('Bienvenido '+ sessionStorage.getItem('username') +'!', 'Chefmind');
 
                 },
                 function(error) {
