@@ -1,0 +1,165 @@
+.admin-new h2 {
+  font-size: 2em;
+}
+.admin-new #background {
+  background-color: #A1C4C3;
+  /* background-image: url('img/1.jpg');
+   background-position:center center;
+   background-size:contain;
+   background-repeat:no-repeat;*/
+}
+.admin-new .login {
+  background-image: url(../img/login.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #F2F2F2;
+  padding: 50px 0;
+}
+.admin-new .registro {
+  background-image: url(../img/registro.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #F2F2F2;
+  padding: 50px 0;
+}
+.admin-new #index-banner {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.admin-new .material-icons {
+  color: #7F7F7E;
+}
+.admin-new .user-header {
+  min-height: 72px;
+}
+.admin-new .iconss {
+  min-height: 45px;
+}
+.admin-new .iconss i {
+  margin: 0 auto;
+  position: relative;
+  left: 10px;
+}
+.admin-new .material-icons:hover {
+  color: #fff;
+}
+.admin-new .material-icons-card {
+  margin-top: 12px;
+}
+.admin-new .icons-card:hover {
+  color: #A1C4C3;
+}
+.admin-new .icon {
+  font-size: 2em;
+  margin: 0;
+  padding: 0;
+}
+.admin-new .user-icon i:hover {
+  color: #A1C4C3;
+  cursor: pointer;
+}
+.admin-new .input {
+  margin-top: 6px;
+  padding: 0;
+  cursor: pointer;
+}
+.admin-new .input-field .btn .send {
+  color: #fff;
+}
+.admin-new .title {
+  font-size: 1em;
+}
+.admin-new .btn {
+  background-color: #E5DDC4;
+}
+.admin-new form {
+  margin-top: 10px;
+}
+.admin-new #index-banner, .admin-new .container_title {
+  color: #B9C1C1;
+  background-color: #A1C4C3;
+}
+.admin-new #index-banner {
+  /*background-color:#3A7A80;*/
+  background-color: rgba(58, 122, 128, 0.6);
+}
+.admin-new buttom {
+  background-color: #A1C4C3;
+}
+.admin-new .container_title {
+  min-height: 80px;
+  font-size: 2em;
+  background-color: #B9B29E;
+  color: #E5DDC4;
+}
+.admin-new .container_title div h3 {
+  font-size: 1em;
+}
+.admin-new .flow-text {
+  max-height: 80px;
+  font-size: 2em;
+  background-color: #B9B29E;
+  color: #E5DDC4;
+}
+.admin-new .container_login {
+  max-width: 700px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.admin-new .left {
+  color: #E5DDC4;
+}
+.admin-new .row .col {
+  padding: 0px;
+}
+.admin-new .rows {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.admin-new .row1 {
+  padding: 10px;
+  background-color: #EBE6D0;
+  color: #9E9E9E;
+  border-radius: 5px 5px 0px 0px;
+}
+.admin-new #contenedor {
+  min-width: 160px;
+  min-height: 350px;
+  background: #fff;
+  border-radius: 5px;
+}
+.admin-new .btn {
+  margin-bottom: 30px;
+}
+.admin-new .card {
+  margin-top: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+  padding-top: 10px;
+}
+.admin-new .card-image {
+  padding: 10px;
+}
+.admin-new .card .card-title {
+  font-size: 1.1rem;
+}
+.admin-new .card-content {
+  margin-bottom: 0px;
+}
+.admin-new .container_configuracion {
+  margin-top: 40px;
+}
+.admin-new .btn {
+  background-color: #B9B29E;
+}
+.admin-new .btn:hover {
+  background-color: #B9B29E;
+}
+/***************************** */
+/***************************** */
+/***************************** */
+/***************************** */
+

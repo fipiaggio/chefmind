@@ -42,7 +42,8 @@ angular
             })
             .state('admin', {
                 url: '/admin',
-                templateUrl: 'views/misrecetas.html'
+                templateUrl: 'views/misrecetas.html',
+                controller: 'uploadRecipeCtrl'
             })
             /*.state('misrecetas', {
                 url: '/misrecetas',
@@ -124,7 +125,7 @@ angular
                 })
                 .error(function(response) {
                     console.log(response);
-                    //toastr.error(response.data.error);
+                    toastr.info('Debes cargar una imagen');
                 });
         }
     })
@@ -148,4 +149,5 @@ angular
                     //toastr.error(response.data.error);
                 });
         }
-    });
+    })
+    

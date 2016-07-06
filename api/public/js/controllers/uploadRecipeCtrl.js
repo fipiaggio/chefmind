@@ -7,6 +7,8 @@ angular.module('chefmindApp').controller('uploadRecipeCtrl', function($scope, $s
     $scope.step = '';
     $scope.ingredients;
     $scope.image;
+    $scope.focus;
+    $scope.blur;
     $scope.recipe.user_id = sessionControl.get('userID');
 
 
@@ -20,22 +22,35 @@ angular.module('chefmindApp').controller('uploadRecipeCtrl', function($scope, $s
         var defered = $q.defer();
         var matchIngredients = [];
         $http.get(CONFIG.APIURL + 'ingredient/' + query).success(function(response) {
-            angular.forEach(response, function(value, key){
-                matchIngredients.push({"text":value.name})
-            })
-            defered.resolve(matchIngredients);
-        }), function(err){
-            defered.reject(err);
-        };
+                angular.forEach(response, function(value, key) {
+                    matchIngredients.push({ "text": value.name })
+                })
+                defered.resolve(matchIngredients);
+            }),
+            function(err) {
+                defered.reject(err);
+            };
         return defered.promise;
 
     };
 
     $scope.saveRecipe = function() {
-        // Upload de la imagen
-        var uploadUrl = CONFIG.APIURL + 'recipes';
-        var file = $scope.image;
-        fileUpload.uploadFileToUrl(file, uploadUrl, $scope.recipe, $scope.steps, $scope.ingredients);
+        if($scope.recipe.name === undefined){
+            toastr.info('Debes cargar el nombre de la receta');
+            return false;
+        };
+        if($scope.recipe.description === undefined){
+            toastr.info('Debes cargar una descripción');
+            return false;
+        };
+        if ($scope.ingredients != undefined) {
+            // Upload de la imagen
+            var uploadUrl = CONFIG.APIURL + 'recipes';
+            var file = $scope.image;
+            fileUpload.uploadFileToUrl(file, uploadUrl, $scope.recipe, $scope.steps, $scope.ingredients);
+        } else {
+            toastr.info('Cuidado, Debes cargar como mínimo un ingrediente');
+        };
     };
 
     $scope.select = {

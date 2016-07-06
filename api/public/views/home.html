@@ -1,17 +1,19 @@
-<div class="section no-pad-bot main-banner home" id="index-banner">
+<div class="section no-pad-bot main-banner home white-banner" id="index-banner">
     <div class="container">
         <div class="row center">
-            <p class="header col s12 light titulo-input">Encuentra la receta que estás buscando</p>
+            <p class="header col s12 light titulo-input">Ingresá tus ingredientes</p>
         </div>
         <div class="row center">
             <div class="col s12 search-container">
                 <form method="post" action="listado.html" class="search-box margin-center">
                     <div class="input-search-field">
-                        <tags-input ng-model="ingredients">
-                            <auto-complete source="loadTags($query)"></auto-complete>
-                        </tags-input>
-                        <input id="search" type="search" placeholder="Ingresa los ingredientes que posees">
-                        <label for="search"><a ng-click="search()"><i class="material-icons">search</i></a></label>
+                        <div class="main-tags-input">
+                            <tags-input ng-model="ingredients" placeholder="ingrediente">
+                                <auto-complete source="loadTags($query)"></auto-complete>
+                            </tags-input>
+                        </div>
+                        <!--input id="search" type="search" placeholder="Ingresa los ingredientes que posees"-->
+                        <label for="search"><a ng-click="search()"><i class="material-icons main-search-icon">search</i></a></label>
                     </div>
                 </form>
             </div>

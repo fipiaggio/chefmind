@@ -97,7 +97,7 @@ angular.module('chefmindApp').controller('editRecipeCtrl', function($scope, auth
         error(function(response) {
         	console.log(response);
         });
-        /*$http.put(CONFIG.APIURL + 'steps/' + $scope.recipe.id, $scope.steps)
+        $http.put(CONFIG.APIURL + 'steps/' + $scope.recipe.id, $scope.steps)
         .success(function(response) {
         	console.log(response);
         }).
@@ -110,6 +110,6 @@ angular.module('chefmindApp').controller('editRecipeCtrl', function($scope, auth
         })
         .error(function(response) {
             console.log(response)
-        });*/
+        });
     };
 });

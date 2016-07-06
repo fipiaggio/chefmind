@@ -1,7 +1,4 @@
-<!-- Chefmind Styles -->
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/style.css">
-<main class="row admin-container">
+<main class="row admin-container admin-new">
     <div class="main row">
         <div class="col s10 m10 l10 left" id="background">
             <div class="col col s12 m12 l12 flow-text">
@@ -13,9 +10,9 @@
             </div>
             <div ng-controller="userRecipesCtrl" class="container">
                 <div class="row">
-                    <div ng-repeat="recipe in myRecipes"class="col s12 m6 l6">
+                    <div ng-repeat="recipe in myRecipes"class="col s12 m7 l6">
                         <div class="card hoverable receta">
-                            <div ui-sref="edit({id:{{recipe.id}}})" class="card-image waves-effect waves-block waves-light">
+                            <div ui-sref="edit({id:{{recipe.id}}})" class="card-image waves-effect waves-block waves-light myrecipe-container">
                                 <img class="activator" ng-src="image/{{recipe.img}}">
                             </div>
                             <div class="card-content">
@@ -28,18 +25,21 @@
                                 <div class="user-icon">
                                     <i class="material-icons">perm_identity</i>
                                 </div>
-                                <p class="autor">Creada el <a href="#">{{recipe.created_at | date :  "dd.MM.y"}}</a></p>
-                                <i ng-click="deteleRecipe(recipe.id)"class="mdi mdi-delete like"></i>
-                                <i ui-sref="recipe( {id:{{recipe.id}} })" class="mdi mdi-eye more"></i>
+                                <p class="autor">Creada el <a href="#">{{recipe.created_at | date:'MM/dd/yyyy'}}</a></p>
+                                <div class="card-action-icons">
+                                    <i ui-sref="edit({id:{{recipe.id}}})" class="mdi mdi-border-color more"></i>
+                                    <i ui-sref="recipe( {id:{{recipe.id}} })" class="mdi mdi-eye more"></i>
+                                    <i ng-click="deteleRecipe(recipe.id)" class="mdi mdi-delete like"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <aside class="col s2 m2 l2 admin-navbar">
+        <aside  ng-controller="userRecipesCtrl"  class="col s2 m2 l2 admin-navbar">
             <div class="user-header">
-                <p class="user-name hide-on-small-only">Panel de usaurio</p>
+                <p class="user-name hide-on-small-only">Panel de {{username}}</p>
                 <div class="user-icon">
                     <i class="material-icons prefix">perm_identity</i>
                 </div>

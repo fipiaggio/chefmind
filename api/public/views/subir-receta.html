@@ -1,5 +1,4 @@
 <!-- Chefmind Styles -->
-<link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/estilo2.css">
 <div class="section-heading">
     <div class="container">
@@ -14,12 +13,12 @@
                 <h5>¡Completá todos los campos correctamente para poder compartir tu receta con los demás cocineros ! </h5>
             </div>
             <div class="col s12 m12" id="contenedor-form">
-                <form enctype="multipart/form-data" ng-submit="saveRecipe()" class="col s12">
+                <form enctype="multipart/form-data"  class="col s12">
                     <div class="row">
                         <div class="row col s12 m9">
                             <h5>Nombre de la receta</h5>
                             <div class="input-field col s12 m11">
-                                <input ng-model="recipe.name" id="nombre_receta" type="text" class="validate">
+                                <input ng-model="recipe.name" id="nombre_receta" type="text" class="validate" required>
                                 <label for="nombre_receta">Ingrese el nombre de la receta</label>
                             </div>
                         </div>
@@ -31,21 +30,21 @@
                     <div class="row">
                         <h5>Descripción de la receta</h5>
                         <div class="input-field col s12 m12">
-                            <textarea ng-model="recipe.description" id="textarea1" class="materialize-textarea"></textarea>
+                            <textarea ng-model="recipe.description" id="textarea1" class="materialize-textarea" required></textarea>
                             <label for="textarea1">Descripción receta</label>
                         </div>
                     </div>
                     <div class="row">
                         <h5>Ingredientes</h5>
-                        <div class="input-field col s12 m12">
-                            <tags-input ng-model="ingredients">
+                        <div class="input-field tag-container col s12 m12">
+                            <tags-input class="input-field" ng-model="ingredients" placeholder="Ingredientes" template="ing">
                                 <auto-complete source="loadTags($query)"></auto-complete>
                             </tags-input>
                             <!--input id="ingredientes" type="text" class="validate"-->
                             <!--label for="ingredientes">Ingrese los ingredientes</label-->
-                            <div class="row right-align">
+                            <!--div class="row right-align">
                                 <a class="waves-effect waves-light btn botones">AGREGAR Ingrediente</a>
-                            </div>
+                            </div-->
                         </div>
                     </div>
                     <div class="row">
@@ -106,7 +105,7 @@
                             <li ng-repeat="step in steps">{{step.description}} <a href="javascript:void(0)" ng-click="deleteStep($index)">Borrar</a></li>
                         </ol>
                         <div class="input-field col s12 m12">
-                            <input ng-model="step" id="paso" type="text" class="validate">
+                            <input  ng-model="step" id="paso" type="text" class="validate">
                             <label for="paso">Escribí un paso</label>
                             <div class="row right-align">
                                 <a ng-hide="step === ''" class="waves-effect waves-light btn botones" ng-click="addStep()">AGREGAR PASO</a>
@@ -114,7 +113,7 @@
                         </div>
                     </div>
                     <div class="row" style="margin-top:150px;">
-                        <input type="submit" value="PUBLICAR RECETA" class="waves-effect waves-light btn botones">
+                        <input type="button"  ng-click="saveRecipe()" value="PUBLICAR RECETA" class="waves-effect waves-light btn botones">
                     </div>
                 </form>
                 <br>
@@ -122,3 +121,11 @@
         </div>
     </div>
 </div>
+<script type="text/ng-template" id="ing">
+  <div class="tag-template">
+    <div>
+      <span>{{$getDisplayText()}}</span>
+      <a class="remove-button" ng-click="$removeTag()">&#10006;</a>
+    </div>
+  </div>
+</script>

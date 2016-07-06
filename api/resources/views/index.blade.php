@@ -17,13 +17,16 @@
     <link rel="stylesheet" href="node_modules/ng-tags-input/build/ng-tags-input.min.css">
     <!-- Chefmind Styles -->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/tags.css">
+    <link rel="stylesheet" href="css/fix.css">
+    <link rel="stylesheet" href="css/fixes.css">
 </head>
 
-<body ng-app="chefmindApp">
+<body ng-cloak ng-app="chefmindApp">
     <div class="navbar-fixed">
         <nav ng-controller="mainMenuCtrl" class="navbar-principal" role="navigation">
             <div class="nav-wrapper container">
-                <a ui-sref="home" class="logo-container">
+                <a ui-sref="app" class="logo-container">
                     <img class="logo-img" src="img/logo.png" alt="logo de chefmind">
                 </a>
                 <ul class="right hide-on-med-and-down">
@@ -31,8 +34,8 @@
                     <li ui-sref-active="active"><a ui-sref="categorias">Categorías</a></li>
                     <li ui-sref-active="active"><a ui-sref="contacto">Contacto</a></li>
                     <li ui-sref-active="active"><a ui-sref="faq">FAQ</a></li>
-                    <li ui-sref-active="active" ng-hide="isLogged"><a ui-sref="login">Iniciar Sesión</a></li>
-                    <li ui-sref-active="active" ng-hide="isLogged"><a ui-sref="registro">Registrarme</a></li>
+                    <li ui-sref-active="active" ng-if="!isLogged"><a ui-sref="login">Iniciar Sesión</a></li>
+                    <li ui-sref-active="active" ng-if="!isLogged"><a ui-sref="registro">Registrarme</a></li>
                     <li ng-if="isLogged" class="upload"><a ui-sref="subirReceta"><i class="material-icons left">mode_edit</i>Subir receta</a></li>
                     <li ui-sref-active="active" ng-if="isLogged"><a ui-sref="admin">Perfil</a></li>
                     <li ui-sref-active="active" ng-if="isLogged"><a ng-click="logout()">Salir</a></li>
@@ -96,6 +99,7 @@
     <script type="text/javascript" src="node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js"></script>
     <script type="text/javascript" src="node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
     <script type="text/javascript" src="node_modules/ng-tags-input/build/ng-tags-input.js"></script>
+    <script type="text/javascript" src="assets/angularcss.js"></script>
 
 
     <!-- App -->

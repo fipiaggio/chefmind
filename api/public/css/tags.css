@@ -1,0 +1,84 @@
+.tag-container{
+	border-bottom: 1px solid #9e9e9e;
+}
+tags-input .tags{
+	box-shadow: none;
+    background-color: transparent !important;
+    border: none !important;
+}
+tags-input .tags.focused{
+	outline: none;
+	box-shadow: none;
+}
+
+.tag-item{
+    display: inline-block;
+    height: 32px !important;
+    font-size: 13px !important;
+    font-weight: 300 !important;
+    color: rgba(0,0,0,0.6) !important;
+    line-height: 32px !important;
+    padding: 0 12px !important;
+    border-radius: 16px !important;
+    background: none !important;
+    background-color: #e4e4e4 !important;
+    border: none !important;
+}
+.tag-item.selected{
+	background-color: #CC3619 !important;
+	color: #ffffff !important;
+}
+.main-tags-input tags-input{
+	position: absolute;
+	width: 100%;
+}
+.main-tags-input .tags{
+	box-shadow: none;
+    background-color: transparent !important;
+    border: none !important;
+}
+.main-tags-input .host {
+    background: #ffffff;
+    padding: 0 0.5rem !important;
+    color: #A09F9F;
+    border: 1px solid #aaaaaa;
+    border-bottom: 5px solid #B5B5B5;
+}
+.main-tags-input input{
+	background: transparent !important;
+    padding: 0;
+    color: #A09F9F;
+    border: none !important;
+    border-bottom: none !important;
+}
+.main-tags-input .tags input{
+	padding: 0.1rem !important;
+	margin: 10px 0;
+}
+.main-tags-input .tag-item{
+	margin: 10px 0 !important;
+}
+.main-search-icon{
+	margin-right: 10px;
+}
+@media only screen and (min-width: 1400px){
+    div[ui-view]{
+        min-height: 800px;
+    }
+    .admin-container #background,
+    .admin-container .admin-navbar,
+    .main-banner.contacto{
+        min-height: 800px;
+    }
+}
+.card-action-icons{
+    margin-left: auto;
+}
+.card-action-icons .mdi-border-color{
+    position: relative;
+    top: 3px;
+    left: 3px;
+}
+.myrecipe-container{
+    min-height: 355px;
+}

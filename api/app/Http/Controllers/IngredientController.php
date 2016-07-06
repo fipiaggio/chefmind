@@ -75,13 +75,6 @@ class IngredientController extends Controller
     public function update(Request $request, $id)
     {   
         
-    
-        /*$ingredients = $request->all();
-        forEach($ingredients as $ingredient){
-            Log::info($ingredient['text']);
-        }
-        return gettype($ingredients);*/
-
         \DB::table('ingredient_recipe')->where('recipe_id', '=', $id)->delete();
         $recipe = Recipe::find($id);
         $ingredients = $request->all();

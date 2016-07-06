@@ -1,12 +1,13 @@
 'use strict';
 
-angular.module('chefmindApp').controller('userRecipesCtrl', function($scope, $http, $state, authUser, toastr, CONFIG) {
+angular.module('chefmindApp').controller('userRecipesCtrl', function($scope, $http, $state, authUser, toastr, CONFIG, sessionControl) {
+
 	$scope.myRecipes;
+	$scope.username = sessionStorage.getItem('username');
 
 	$scope.getMyRecipes = function(){
 	    $http.get(CONFIG.APIURL + 'userRecipes').then(function success(response) {
 	    	$scope.myRecipes = response.data;
-	        console.log(response)
 	    }), function(response){
 	    	console.log(response)
 	    };
