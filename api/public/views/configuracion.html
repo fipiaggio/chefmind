@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/style.css">
 <main class="row admin-container">
     <div class="main row">
@@ -22,40 +21,40 @@
                                     <div class="rows">
                                         <div class="input-field col s12">
                                             <i class="material-icons prefix">perm_identity</i>
-                                            <input id="first_name" type="text" class="validate">
+                                            <input ng-model="user.name" id="first_name" type="text" class="validate">
                                             <label for="first_name">Nombre</label>
                                         </div>
                                     </div>
-                                    <div class="rows">
+                                    <!--div class="rows">
                                         <div class="input-field col s12">
                                             <i class="material-icons prefix">perm_identity</i>
                                             <input id="last_name" type="text" class="validate">
                                             <label for="last_name">Apellido</label>
                                         </div>
-                                    </div>
+                                    </div-->
                                     <div class="rows">
                                         <div class="input-field col s12">
                                             <i class="material-icons prefix">email</i>
-                                            <input id="email" type="email" class="validate">
+                                            <input ng-model="user.email" id="email" type="email" class="validate">
                                             <label for="email" data-error="wrong" data-success="right">Email</label>
                                         </div>
                                     </div>
                                     <div class="rows">
                                         <div class="input-field col s12">
                                             <i class="material-icons prefix">lock</i>
-                                            <input id="password" type="password" class="validate">
-                                            <label for="password">Password</label>
+                                            <input ng-model="user.password" id="password" type="password" class="validate">
+                                            <label for="password">Cambiar contraseña</label>
                                         </div>
                                     </div>
                                     <div class="rows">
                                         <div class="input-field col s12">
                                             <i class="material-icons prefix">lock</i>
-                                            <input id="password1" type="password" class="validate">
+                                            <input ng-model="user.checkPassword" id="password1" type="password" class="validate">
                                             <label for="password1">Re-Password</label>
                                         </div>
                                     </div>
                                 </form>
-                                <div class="rows">
+                                <!--div class="rows">
                                     <div class="input-field col s12">
                                         <form action="#" method="post">
                                             <div class="file-field input-field">
@@ -69,7 +68,7 @@
                                             </div>
                                         </form>
                                     </div>
-                                </div>
+                                </div-->
                                 <div class="container center-align">
                                     <div class="input-field col s12">
                                         <button class="btn waves-effect waves-light" type="submit" name="action">Aceptar

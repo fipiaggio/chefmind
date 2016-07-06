@@ -51,7 +51,8 @@ angular
             })*/
             .state('configuracion', {
                 url: '/configuracion',
-                templateUrl: 'views/configuracion.html'
+                templateUrl: 'views/configuracion.html',
+                controller: 'userConfigurateCtrl'
             })
             .state('subirReceta', {
                 url: '/subir-receta',

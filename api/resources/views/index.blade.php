@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/tags.css">
     <link rel="stylesheet" href="css/fix.css">
-    <link rel="stylesheet" href="css/fixes.css">
+    <!-- link rel="stylesheet" href="css/fixes.css" -->
 </head>
 
 <body ng-cloak ng-app="chefmindApp">
@@ -109,6 +109,7 @@
     <script type="text/javascript" src="js/controllers/uploadRecipeCtrl.js"></script>
     <script type="text/javascript" src="js/controllers/userRecipesCtrl.js"></script>
     <script type="text/javascript" src="js/controllers/editRecipeCtrl.js"></script>
+    <script type="text/javascript" src="js/controllers/userConfigurateCtrl.js"></script>
     <script type="text/javascript" src="js/controllers/listRecipesCtrl.js"></script>
     <script type="text/javascript" src="js/controllers/homeCtrl.js"></script>
     <script type="text/javascript" src="js/controllers/recipeCtrl.js"></script>
